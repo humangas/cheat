@@ -1,10 +1,13 @@
 site_name: humangas's cheat sheet
-site_url: https://humangas.github.io/cheat/
-repo_url: https://github.com/humangas/cheat/
-repo_name: GitHub
 site_description: humangas's cheat sheet
 site_author: humangas
 copyright: Copyright (c) 2018 humangas
+repo_name: GitHub
+site_url: https://humangas.github.io/cheat/
+repo_url: https://github.com/humangas/cheat/
+edit_uri: edit/master/_docs/
+#https://github.com/humangas/cheat/edit/master/_docs/du.md
+#https://github.com/humangas/cheat/edit/master/docs/investigate.md
 google_analytics: ['UA-43176477-6', 'auto']
 theme:
   name: 'material'
