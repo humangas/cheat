@@ -75,8 +75,6 @@ $ mkdocs serve
 
 
 ## Build
-```
-$ mkdocs build
-```
+Use CircleCI: See [.circleci/config.yml](https://github.com/humangas/cheat/blob/master/.circleci/config.yml)
 
 
