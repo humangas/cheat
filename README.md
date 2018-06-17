@@ -45,6 +45,8 @@ google_analytics: ['UA-43176477-6', 'auto']
 theme:
   name: 'material'
   language: 'ja'
+docs_dir: '_docs'
+site_dir: 'docs'
 extra:
   search:
     language: 'jp'
@@ -60,6 +62,9 @@ $ cat .gitignore
 site/
 .python-version
 ```
+
+Settings > Options > GitHub Pages > Source: 
+- master branch /docs folder
 
 
 ## Testing Views
