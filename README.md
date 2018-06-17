@@ -35,12 +35,13 @@ $ rm -rf temp
 $ vim mkdocs.yml
 $ cat mkdocs.yml
 site_name: humangas's cheat sheet
-site_url: https://humangas.github.io/cheat/
-repo_url: https://github.com/humangas/cheat/
-repo_name: GitHub
 site_description: humangas's cheat sheet
 site_author: humangas
 copyright: Copyright (c) 2018 humangas
+repo_name: GitHub
+site_url: https://humangas.github.io/cheat/
+repo_url: https://github.com/humangas/cheat/
+edit_uri: edit/master/_docs/
 google_analytics: ['UA-43176477-6', 'auto']
 theme:
   name: 'material'
