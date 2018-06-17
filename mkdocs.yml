@@ -6,8 +6,6 @@ repo_name: GitHub
 site_url: https://humangas.github.io/cheat/
 repo_url: https://github.com/humangas/cheat/
 edit_uri: edit/master/_docs/
-#https://github.com/humangas/cheat/edit/master/_docs/du.md
-#https://github.com/humangas/cheat/edit/master/docs/investigate.md
 google_analytics: ['UA-43176477-6', 'auto']
 theme:
   name: 'material'
