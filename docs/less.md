@@ -1,11 +1,13 @@
 ## [less] lessでよく使う操作
 開く前に:
+
 - less +F file: = tail -f file  <C-c>で通常lessモードに
 
 開いた後に:
+
 - <S-f>: tail -f モード
 - <S-=>: 情報表示（ライン、ファイルサイズ）
-  - e.g. log/xxx.log lines 1-11/11 byte 1054/1054 (END)   (press RETURN)
+    - e.g. log/xxx.log lines 1-11/11 byte 1054/1054 (END)   (press RETURN)
 - !<CR>: コマンドモード（exitにlessに戻る）
 - !{command}: コマンド実行
 - v: そのファイルをvimで開く
