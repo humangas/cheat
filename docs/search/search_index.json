@@ -1,0 +1,319 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
+            "title": "Welcome to MkDocs"
+        },
+        {
+            "location": "/#welcome-to-mkdocs",
+            "text": "For full documentation visit  mkdocs.org .",
+            "title": "Welcome to MkDocs"
+        },
+        {
+            "location": "/#commands",
+            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.",
+            "title": "Commands"
+        },
+        {
+            "location": "/#project-layout",
+            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
+            "title": "Project layout"
+        },
+        {
+            "location": "/du/",
+            "text": "[du] \u30c7\u30ab\u76ee\u306e\u30d5\u30a1\u30a4\u30eb\u306e\u5408\u8a08\u3092\u964d\u9806\u30bd\u30fc\u30c8\u3057\u3066\u8868\u793a\u3057\u305f\u3044\n\n\n$ sudo du -sh /home/persons/* | grep G | sort -nr\n3.9G    /home/persons/honda_atsuhiro\n2.6G    /home/persons/kagawa_shinji\n2.3G    /home/persons/nagatomo_yuuto\n1.6G    /home/persons/masa_saito\n1.1G    /home/persons/hiro_saito\n\n\n\n\n[du] \u30c7\u30a3\u30ec\u30af\u30c8\u30ea\u5358\u4f4d\u306e\u5bb9\u91cf \u4e3b\u8981\u30aa\u30d7\u30b7\u30e7\u30f3\u304c\u77e5\u308a\u305f\u3044\n\n\n\n\ns: \u30b5\u30de\u30ea\uff08\u5408\u8a08\uff09\n\n\na: \u30d5\u30a1\u30a4\u30eb\u3082\u51fa\u3059\n\n\nb: \u30c7\u30d5\u30a9\u30eb\u30c8\u306eKbyte\u3067\u306f\u306a\u304f\u3001byte\u3067\u51fa\u3059\n\n\nk: Kbyte, -m: Mbyte\n\n\nh: \u00e4\u00ba\u00ba\u306b\u8aad\u307f\u3084\u3059\u3044\u5358\u4f4d\u3067\u51fa\u3059\n\n\nc: \u6700\u5f8c\u306b\u5408\u8a08\u304c\u3067\u308b\n\n\n\n\n[du] \u30d5\u30a1\u30a4\u30eb\u30b5\u30a4\u30ba\u30e9\u30f3\u30ad\u30f3\u30b0 TOP10\n\n\n2>/dev/null \u3067\u30a8\u30e9\u30fc\u306f\u7121\u8996\u3059\u308b\n\n\n$ du -s /* 2>/dev/null | sort -nr | head -10\n\n11822140 /var\n8238456 /home\n1920804 /usr\n\u30fb\u30fb\u30fb\n\n\n\n\n[du] \u8ca0\u8377\u3092\u304b\u3051\u3059\u3099\u306b\u30b5\u30a4\u30b9\u3099\u3092\u8abf\u3078\u3099\u308b\n\n\nionice\u3068nice\uff08= \u30d7\u30ed\u30bb\u30b9\u306e\u5b9f\u884c\u512a\u5148\u5ea6\uff09\u3092\u4e0b\u3052\u3066\uff08\u4f8b\u306f\u6700\u4f4e\u306e19\uff09\u306b\u3057\u3066du\u3059\u308b\u3002\n\ndu\u306f\u5927\u91cf\u30d5\u30a1\u30a4\u30eb\u306b\u304b\u3051\u308b\u3068\u8ca0\u00e8\u008d\u00b7\u306b\u306a\u308b\u306e\u3067\u3001du\u3059\u308b\u5834\u6240\u306b\u3088\u3063\u3066\u306f\u8ca0\u8377\u3092\u30b3\u30f3\u30c8\u30ed\u30fc\u30eb\u3059\u308b\u3002\n\n\n$ ionice -c2 -n7 nice -n19 du -scm *\n\n\n\n\nnice: \u6570\u5024\u304c\u5c0f\u3055\u3044\u307b\u3046\u304c\u30d7\u30ed\u30bb\u30b9\u306e\u5b9f\u884c\u512a\u5148\u5ea6\u304c\u9ad8\u3044\n- root: 19 \u301c -20\n- user: 19 \u301c 0\n\n\nionice: \u30d7\u30ed\u30bb\u30b9\u306e\u30c7\u30a3\u30b9\u30afI/O\u512a\u5148\u5ea6\u3092\u6307\u5b9a\u3059\u308b(nice\u306eI/O\u7248\uff09\n- c[1-3]: 1:Real Time\uff08\u6700\u9ad8\uff09, 2:Best Effort\uff08\u30c7\u30d5\u30a9\u30eb\u30c8\uff09, 3:Idle\uff08\u6700\u4f4e\uff09\n- n[0-7]: nice\u3068\u540c\u3058\u3067\u6570\u5024\u304c\u5c0f\u3055\u3044\u307b\u3046\u304c\u512a\u5148\u5ea6\u304c\u9ad8\u3044(7 \u301c 0)\n\n\n\u305f\u3060\u3057\u3001ionice\u306f\u4ee5\u4e0b\u306e2\u6761\u4ef6\u3092\u6e80\u305f\u305b\u00e3\u0081\u00aa\u3044\u3068\u52b9\u304b\u306a\u3044\u306e\u3067\u6ce8\u610f\n- I/O Scheduler\u304cCFQ\n- \u7279\u5b9a\u306eI/O: \u30ad\u30e3\u30c3\u30b7\u30e5\u3055\u308c\u3066\u3044\u306a\u3044\u30d5\u30a1\u30a4\u30eb\u3078\u306eRead, \u7279\u6b8a\u30d5\u30e9\u30b0\u306e\u7acb\u3063\u305fWrite\n\n\n\n\nsee: \n\u305d\u306eionice\u3001\u307b\u3093\u3068\u3046\u306b\u52b9\u3044\u3066\u307e\u3059\u304b\uff1f",
+            "title": "Du"
+        },
+        {
+            "location": "/du/#du",
+            "text": "$ sudo du -sh /home/persons/* | grep G | sort -nr\n3.9G    /home/persons/honda_atsuhiro\n2.6G    /home/persons/kagawa_shinji\n2.3G    /home/persons/nagatomo_yuuto\n1.6G    /home/persons/masa_saito\n1.1G    /home/persons/hiro_saito",
+            "title": "[du] \u30c7\u30ab\u76ee\u306e\u30d5\u30a1\u30a4\u30eb\u306e\u5408\u8a08\u3092\u964d\u9806\u30bd\u30fc\u30c8\u3057\u3066\u8868\u793a\u3057\u305f\u3044"
+        },
+        {
+            "location": "/du/#du_1",
+            "text": "s: \u30b5\u30de\u30ea\uff08\u5408\u8a08\uff09  a: \u30d5\u30a1\u30a4\u30eb\u3082\u51fa\u3059  b: \u30c7\u30d5\u30a9\u30eb\u30c8\u306eKbyte\u3067\u306f\u306a\u304f\u3001byte\u3067\u51fa\u3059  k: Kbyte, -m: Mbyte  h: \u00e4\u00ba\u00ba\u306b\u8aad\u307f\u3084\u3059\u3044\u5358\u4f4d\u3067\u51fa\u3059  c: \u6700\u5f8c\u306b\u5408\u8a08\u304c\u3067\u308b",
+            "title": "[du] \u30c7\u30a3\u30ec\u30af\u30c8\u30ea\u5358\u4f4d\u306e\u5bb9\u91cf \u4e3b\u8981\u30aa\u30d7\u30b7\u30e7\u30f3\u304c\u77e5\u308a\u305f\u3044"
+        },
+        {
+            "location": "/du/#du-top10",
+            "text": "2>/dev/null \u3067\u30a8\u30e9\u30fc\u306f\u7121\u8996\u3059\u308b  $ du -s /* 2>/dev/null | sort -nr | head -10\n\n11822140 /var\n8238456 /home\n1920804 /usr\n\u30fb\u30fb\u30fb",
+            "title": "[du] \u30d5\u30a1\u30a4\u30eb\u30b5\u30a4\u30ba\u30e9\u30f3\u30ad\u30f3\u30b0 TOP10"
+        },
+        {
+            "location": "/du/#du_2",
+            "text": "ionice\u3068nice\uff08= \u30d7\u30ed\u30bb\u30b9\u306e\u5b9f\u884c\u512a\u5148\u5ea6\uff09\u3092\u4e0b\u3052\u3066\uff08\u4f8b\u306f\u6700\u4f4e\u306e19\uff09\u306b\u3057\u3066du\u3059\u308b\u3002 \ndu\u306f\u5927\u91cf\u30d5\u30a1\u30a4\u30eb\u306b\u304b\u3051\u308b\u3068\u8ca0\u00e8\u008d\u00b7\u306b\u306a\u308b\u306e\u3067\u3001du\u3059\u308b\u5834\u6240\u306b\u3088\u3063\u3066\u306f\u8ca0\u8377\u3092\u30b3\u30f3\u30c8\u30ed\u30fc\u30eb\u3059\u308b\u3002  $ ionice -c2 -n7 nice -n19 du -scm *  nice: \u6570\u5024\u304c\u5c0f\u3055\u3044\u307b\u3046\u304c\u30d7\u30ed\u30bb\u30b9\u306e\u5b9f\u884c\u512a\u5148\u5ea6\u304c\u9ad8\u3044\n- root: 19 \u301c -20\n- user: 19 \u301c 0  ionice: \u30d7\u30ed\u30bb\u30b9\u306e\u30c7\u30a3\u30b9\u30afI/O\u512a\u5148\u5ea6\u3092\u6307\u5b9a\u3059\u308b(nice\u306eI/O\u7248\uff09\n- c[1-3]: 1:Real Time\uff08\u6700\u9ad8\uff09, 2:Best Effort\uff08\u30c7\u30d5\u30a9\u30eb\u30c8\uff09, 3:Idle\uff08\u6700\u4f4e\uff09\n- n[0-7]: nice\u3068\u540c\u3058\u3067\u6570\u5024\u304c\u5c0f\u3055\u3044\u307b\u3046\u304c\u512a\u5148\u5ea6\u304c\u9ad8\u3044(7 \u301c 0)  \u305f\u3060\u3057\u3001ionice\u306f\u4ee5\u4e0b\u306e2\u6761\u4ef6\u3092\u6e80\u305f\u305b\u00e3\u0081\u00aa\u3044\u3068\u52b9\u304b\u306a\u3044\u306e\u3067\u6ce8\u610f\n- I/O Scheduler\u304cCFQ\n- \u7279\u5b9a\u306eI/O: \u30ad\u30e3\u30c3\u30b7\u30e5\u3055\u308c\u3066\u3044\u306a\u3044\u30d5\u30a1\u30a4\u30eb\u3078\u306eRead, \u7279\u6b8a\u30d5\u30e9\u30b0\u306e\u7acb\u3063\u305fWrite   see:  \u305d\u306eionice\u3001\u307b\u3093\u3068\u3046\u306b\u52b9\u3044\u3066\u307e\u3059\u304b\uff1f",
+            "title": "[du] \u8ca0\u8377\u3092\u304b\u3051\u3059\u3099\u306b\u30b5\u30a4\u30b9\u3099\u3092\u8abf\u3078\u3099\u308b"
+        },
+        {
+            "location": "/find/",
+            "text": "[find] \u3042\u308b\u65e5\u6642\u3088\u308a\u5f8c\u306b\u66f4\u65b0\u3055\u308c\u305f\u30d5\u30a1\u30a4\u30eb\u3092\u63a2\u3057\u305f\u3044\n\n\n'2017/09/01 11:53' \u3088\u308a\u5f8c\u306b\u66f4\u65b0\u3055\u308c\u305f\u30d5\u30a1\u30a4\u30eb\u3092\u63a2\u3059\n\n\n$ sudo find /home/test_taro/* -type f -newermt '20170901 11:53' | xargs ls -lh\n-rwx------ 1 test_taro test  436M  9\u6708  1 11:58 2017 /home/test_taro/S23.csv\n-rwx------ 1 test_taro test  6.6M  9\u6708  1 11:57 2017 /home/test_taro/S23_CTL.csv\n-rwx------ 1 test_taro test  384M  9\u6708  1 11:58 2017 /home/test_taro/S23_LIST.csv\n-rwx------ 1 test_taro test   22M  9\u6708  1 12:23 2017 /home/test_taro/S26.csv\n-rwx------ 1 test_taro test  329K  9\u6708  1 12:23 2017 /home/test_taro/S26_CTL.csv\n...\n\n\n\n\n\u30aa\u30d7\u30b7\u30e7\u30f3:\n- newerat/atime: \u30a2\u30af\u30bb\u30b9\u3055\u308c\u305f\u30d5\u30a1\u30a4\u30eb\n- newerct/ctime: \u5c5e\u6027\u5909\u66f4\u3055\u308c\u305f\u30d5\u30a1\u30a4\u30eb\n- newermt/mtime: \u66f4\u65b0\u3055\u308c\u305f\u30d5\u30a1\u30a4\u30eb\n\n\n[find] \u3042\u308b\u65e5\u6642\u4ee5\u524d\u306b\u66f4\u65b0\u3055\u308c\u305f\u30d5\u30a1\u30a4\u30eb\u3092\u63a2\u3057\u305f\u3044\n\n\n'2015/01/01 00:00' \u4ee5\u524d\u306b\u66f4\u65b0\u3055\u308c\u305f\u30d5\u30a1\u30a4\u30eb\u3092\u63a2\u3059 \n\n\n$ sudo find ./* -type f ! -newermt '20150101 00:00' | xargs ls -lh\n\n\n\n\n\n[find] \u3042\u308b\u671f\u9593\u306e\u9593\u306b\u66f4\u65b0\u3055\u308c\u305f\u30d5\u30a1\u30a4\u30eb\u3092\u63a2\u3057\u305f\u3044\n\n\n2017/05/09 14:00 - 2017/05/09 17:00 \u306e\u9593\u306b\u66f4\u65b0\u3055\u308c\u305f\u30d5\u30a1\u30a4\u30eb\u3092\u63a2\u3059\n\n\n# '2017/05/09 14:00' < \u30d5\u30a1\u30a4\u30eb\u306e\u66f4\u65b0\u65e5\u6642 <= '2017/05/09 17:00'\n$ sudo find ./* -type f -newermt '20170509 14:00' ! -newermt '20170509 17:00' | xargs ls -lh\n\n\n\n\n[find] find\u3057\u305f\u7d50\u679c\u3092\u4e00\u6c17\u306bmv\n\n\nfind ./ -name '*.png' | xargs -I% mv % ./\n\n\n\n\n\n\nhttp://qiita.com/pekepek/items/207c13c79826b459db6b",
+            "title": "Find"
+        },
+        {
+            "location": "/find/#find",
+            "text": "'2017/09/01 11:53' \u3088\u308a\u5f8c\u306b\u66f4\u65b0\u3055\u308c\u305f\u30d5\u30a1\u30a4\u30eb\u3092\u63a2\u3059  $ sudo find /home/test_taro/* -type f -newermt '20170901 11:53' | xargs ls -lh\n-rwx------ 1 test_taro test  436M  9\u6708  1 11:58 2017 /home/test_taro/S23.csv\n-rwx------ 1 test_taro test  6.6M  9\u6708  1 11:57 2017 /home/test_taro/S23_CTL.csv\n-rwx------ 1 test_taro test  384M  9\u6708  1 11:58 2017 /home/test_taro/S23_LIST.csv\n-rwx------ 1 test_taro test   22M  9\u6708  1 12:23 2017 /home/test_taro/S26.csv\n-rwx------ 1 test_taro test  329K  9\u6708  1 12:23 2017 /home/test_taro/S26_CTL.csv\n...  \u30aa\u30d7\u30b7\u30e7\u30f3:\n- newerat/atime: \u30a2\u30af\u30bb\u30b9\u3055\u308c\u305f\u30d5\u30a1\u30a4\u30eb\n- newerct/ctime: \u5c5e\u6027\u5909\u66f4\u3055\u308c\u305f\u30d5\u30a1\u30a4\u30eb\n- newermt/mtime: \u66f4\u65b0\u3055\u308c\u305f\u30d5\u30a1\u30a4\u30eb",
+            "title": "[find] \u3042\u308b\u65e5\u6642\u3088\u308a\u5f8c\u306b\u66f4\u65b0\u3055\u308c\u305f\u30d5\u30a1\u30a4\u30eb\u3092\u63a2\u3057\u305f\u3044"
+        },
+        {
+            "location": "/find/#find_1",
+            "text": "'2015/01/01 00:00' \u4ee5\u524d\u306b\u66f4\u65b0\u3055\u308c\u305f\u30d5\u30a1\u30a4\u30eb\u3092\u63a2\u3059   $ sudo find ./* -type f ! -newermt '20150101 00:00' | xargs ls -lh",
+            "title": "[find] \u3042\u308b\u65e5\u6642\u4ee5\u524d\u306b\u66f4\u65b0\u3055\u308c\u305f\u30d5\u30a1\u30a4\u30eb\u3092\u63a2\u3057\u305f\u3044"
+        },
+        {
+            "location": "/find/#find_2",
+            "text": "2017/05/09 14:00 - 2017/05/09 17:00 \u306e\u9593\u306b\u66f4\u65b0\u3055\u308c\u305f\u30d5\u30a1\u30a4\u30eb\u3092\u63a2\u3059  # '2017/05/09 14:00' < \u30d5\u30a1\u30a4\u30eb\u306e\u66f4\u65b0\u65e5\u6642 <= '2017/05/09 17:00'\n$ sudo find ./* -type f -newermt '20170509 14:00' ! -newermt '20170509 17:00' | xargs ls -lh",
+            "title": "[find] \u3042\u308b\u671f\u9593\u306e\u9593\u306b\u66f4\u65b0\u3055\u308c\u305f\u30d5\u30a1\u30a4\u30eb\u3092\u63a2\u3057\u305f\u3044"
+        },
+        {
+            "location": "/find/#find-findmv",
+            "text": "find ./ -name '*.png' | xargs -I% mv % ./   http://qiita.com/pekepek/items/207c13c79826b459db6b",
+            "title": "[find] find\u3057\u305f\u7d50\u679c\u3092\u4e00\u6c17\u306bmv"
+        },
+        {
+            "location": "/git/",
+            "text": "[git] git\u3067\u6700\u521d\u306b\u3084\u308b\u57fa\u672c\u8a2d\u5b9a\n\n\n\u30e6\u30fc\u30b6\u540d\u30fb\u30e1\u30fc\u30eb\u30a2\u30c9\u30ec\u30b9\uff08push\u3059\u308b\u3068\u304d\u306b\u5fc5\u9808\uff09\n\n\n$ git config --global user.name XXX\n$ git config --global user.email XXX@XXX.com\n\n\n\n\nMac\u306e\u5834\u5408\u3067\u3001\u30d1\u30b9\u30ef\u30fc\u30c9\u3067push\u3059\u308b\uff08ssh\u306e\u9375\u3067push\u3057\u306a\u3044\uff09\u5834\u5408\u3001osxkeychain\u306b\u4fdd\u5b58\u3059\u308b\n\n\n$ git config --global credential.helper osxkeychain\n\n\n\n\nssh(git\u30d7\u30ed\u30c8\u30b3\u30eb)\u4f7f\u3048\u306a\u304f\u3066https\u7e1b\u308a\u306e\u5834\u5408\u3067\u3001\u3055\u3089\u306b\u30aa\u30ec\u30aa\u30ec\u8a3c\u660e\u66f8\u306e\u5834\u5408\n\n\n$ git config --global http.sslverify false \n\n\n\n\n[git] add\u3057\u305f\u30d5\u30a1\u30a4\u30eb\u306ediff\u3092\u78ba\u8a8d\u3059\u308b(commit\u524d\uff09\n\n\n$ git diff --cached\n$ git diff --cached <\u30d5\u30a1\u30a4\u30eb\u30d1\u30b9>\n\n\n\n\n[git] HEAD\u306b\u30de\u30fc\u30b7\u3099\u3057\u305f\u30d5\u3099\u30e9\u30f3\u30c1\u3092\u524a\u9664\u3057\u305f\u3044\n\n\n$ git branch --delete foo\n\n\n\n\n[git] master\u306e\u5185\u5bb9\u3092\u5f15\u304d\u7d99\u304b\u3099\u3059\u3099\u306b\u30d5\u3099\u30e9\u30f3\u30c1\u3092\u4f5c\u6210\u3057\u305f\u3044(\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u7ba1\u7406\u5c02\u7528\u30d6\u30e9\u30f3\u30c1\u4f5c\u6210\u306e\u5834\u5408\u306a\u3069)\n\n\n\u901a\u5e38\u306e\u30d6\u30e9\u30f3\u30c1\u4f5c\u6210 \uff08\u4f8b\u3048\u3070 git checkout -b gh-pages\uff09 \u3067\u306f\u3001\u4f5c\u696d\u30c7\u30a3\u30ec\u30af\u30c8\u30ea\u306e\u5185\u5bb9\u304c\u5168\u3066\u5f15\u304d\u7d99\u304c\u308c\u3066\u3057\u307e\u3046\u3002\n\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u7ba1\u7406\u5c02\u7528\u30d6\u30e9\u30f3\u30c1\u3092\u4f5c\u6210\u3057\u305f\u3044\u3068\u3044\u3046\u8981\u4ef6\u306e\u5834\u5408\u3001master\u306e\u5185\u5bb9\u306f\u4e0d\u8981\u3002\u305d\u3046\u3044\u3046\u6642\u306f\u4ee5\u4e0b\u306e\u624b\u9806\u3067\u3067\u304d\u308b\u3002\n\n\ne.g. staging\u74b0\u5883\u306e\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u516c\u958b\u7528\u30d6\u30e9\u30f3\u30c1(staging)\u3092\u4f5c\u6210\u3059\u308b\n\n\n$ git clone https://github.com/humangas/x_document.git\n$ (master) cd x_document\n$ (master) git symbolic-ref HEAD refs/heads/staging\n$ (staging) rm .git/index\n$ (staging) git clean -fdx\n$ (staging) echo \"Hello\" > index.md\n$ (staging) git add -A\n$ (staging) git commit -m 'first commit'\n$ (staging) git push origin staging\n\n\n\n\n[git] \u307e\u305f\u3099\u30ea\u30e2\u30fc\u30c8\u306bpush\u3057\u3066\u306a\u3044\u30ed\u30fc\u30ab\u00e3\u0083\u00ab\u30b3\u30df\u30c3\u30c8\u3092\u78ba\u8a8d\u3059\u308b\n\n\n$ git log origin/master..master\n\n\n\n\n\u30d6\u30e9\u30f3\u30c1\u3092\u6307\u5b9a\u3059\u308b\u5834\u5408\n\n\n$ git log origin/master..<branch>\n\n\n\n\n\uff08\u9006\u306b\uff09\u30ea\u30e2\u30fc\u30c8\u306eorigin/master\u306b\u306e\u307f\u5b58\u5728\u3059\u308b\u30b3\u30df\u30c3\u30c8\u3092\u898b\u305f\u3044\u5834\u5408\n\n\ngit log master..origin/master\n\n\n\n\n\u30ed\u30fc\u30ab\u30eb\u3060\u3051\u3082\u30ea\u30e2\u30fc\u30c8\u3060\u3051\u3082\u5408\u308f\u305b\u3066\u4e21\u65b9\u306e\u30b3\u30df\u30c3\u30c8\u30ed\u30b0\u3092\u8868\u793a(\u300c...\u300d\u304c\uff13\u3064\u306b\u306a\u3063\u3066\u3044\u308b)\n\n\n$ git log origin/master...master\n\n\n\n\n--left-right \u30aa\u30d7\u30b7\u30e7\u30f3\u3092\u4ed8\u3051\u308b\u3068\u3069\u306e\u30b3\u30df\u30c3\u30c8\u304c\u3069\u3063\u3061\u306e\u30d6\u30e9\u30f3\u30c1\u306b\u5b58\u5728\u3057\u3066\u3044\u308b\u304b\u3092\u78ba\u8a8d\u3067\u304d\u308b\n\n\n$ git log --left-right master...origin/master\n\n\n\n\n[git] \u30b3\u30df\u30c3\u30c8\u3057\u305f\u30d5\u30a1\u30a4\u30eb\u306ediff\u3092\u898b\u305f\u3044\n\n\n$ git log\n# \u76ee\u7684\u306ecommit id\u3092\u30b3\u30d4\u30fc\n$ git show <commit id>\n\n\n\n\n[git] \u30d5\u3099\u30e9\u30f3\u30c1\u3092\u5f37\u5236\u524a\u9664\u3057\u305f\u3044\n\n\n\u30de\u30fc\u30b8\u3057\u305f\u304b\u3069\u3046\u304b\u3092\u554f\u308f\u305a\u306b\u524a\u9664\u3059\u308b\n\n\n$ git branch -D foo\n\n\n\n\n[git] \u30ea\u30e2\u30fc\u30c8\u30d6\u30e9\u30f3\u30c1\u3092\u524a\u9664\u3057\u305f\u3044\n\n\n\u30b3\u30ed\u30f3\u3092\u524d\u306b\u3064\u3051\u308b\uff08\u30ed\u30fc\u30ab\u30eb\u306f\u6b8b\u308b\u306e\u3067\u3001git branch -D foo \u3067\u524a\u9664\uff09\n\n\n$ git push origin :new-feature\nTo https://source.developers.google.com/p/projectid/r/default\n - [deleted]         new-feature\n\n\n\n\n[git] \u3059\u3079\u3066\u306e\uff08\u30ed\u30fc\u30ab\u30eb\u30fb\u30ea\u30e2\u30fc\u30c8\uff09 \u30d6\u30e9\u30f3\u30c1\u3092\u8868\u793a\u3059\u308b\n\n\n$ git branch --all\nmaster\nfoo\nbar\norigin/HEAD -> origin/master\norigin/foo\norigin/bar\n\n\n\n\n\u30ea\u30e2\u30fc\u30c8\u3060\u3051\u53c2\u7167\u3059\u308b\u5834\u5408\u306f\u3001\n--remote\n\n\n[git] \u7279\u5b9a\u306e\u30b3\u30df\u30c3\u30c8\u305f\u3099\u3051\u623b\u3057\u305f\u3044\n\n\n$ git log <\u30d5\u30a1\u30a4\u30eb\u30d1\u30b9>\n$ git checkout ad97721dbcf4e3d7f68305c714d673aaafc32637 <\u30d5\u30a1\u30a4\u30eb\u30d1\u30b9>\n\n\n\n\n[git] \u30b3\u30df\u30c3\u30c8\u3092\u3084\u308a\u76f4\u3057\u305f\u3044\uff08\u3042\u306e\u6642\u306b\u623b\u308a\u305f\u3044\uff09: reflog\u3067\u78ba\u8a8d\u3057\u3066\u304b\u3089\u305d\u3053\u306breset\u3059\u308b\n\n\n$ git reflog\n3e9e73e HEAD@{1}: reset: moving to HEAD@{6}\n8f19cec (HEAD -> master, origin/master, origin/canary, canary) HEAD@{2}: merge canary: Fast-forward\n787e3f4 HEAD@{3}: reset: moving to HEAD^\n\n$ git reset --hard HEAD@{2}\n\n\n\n\nreflog: \u53c2\u7167\u30ed\u30b0\u3001\u904e\u53bb\u306e\u3042\u3089\u3086\u308b\u30b3\u30df\u30c3\u30c8\u5c65\u6b74\u3092\u307f\u308b\u3053\u3068\u304c\u3067\u304d\u3001\u4e0a\u8a18\u306e\u00e3\u0082\u0088\u3046\u306b\u6307\u5b9a\u3059\u308c\u3070\u305d\u3053\u307e\u3067\u623b\u308b\u3053\u3068\u304c\u3067\u304d\u308b\n\n\u30e6\u30fc\u30b9\u30b1\u30fc\u30b9: \u3042\u308b\u6642\u70b9\u304b\u3089\u306e\u30b3\u30df\u30c3\u30c8\u3092\u5168\u90e8\u3084\u308a\u76f4\u3057\u305f\u3044\u3068\u304d\n\n\n[git] \u7279\u5b9a\u306e\u30b3\u30df\u30c3\u30c8\u3060\u3051\u3092\u3084\u308a\u76f4\u3057\u305f\u3044\uff08\u53d6\u308a\u6d88\u3057\u7dda\u306e\u30a4\u30e1\u30fc\u30b8\uff09: revert\n\n\n$ git revert <commit id>\n\n\n\n\n\u30e6\u30fc\u30b9\u30b1\u30fc\u30b9: \u30d0\u30b0\u306e\u539f\u56e0\u304c\u3042\u308b\u30b3\u30df\u30c3\u30c8\u306b\u8d77\u56e0\u3057\u3066\u304a\u308a\u3001\u305d\u308c\u3060\u3051\u9664\u304d\u305f\u3044\u3068\u304d\n\n\u5143\u306b\u623b\u3059\u304c\u3001\u5143\u306b\u623b\u3057\u305f\u3053\u3068\u3092\u65b0\u305f\u306a\u30b3\u30df\u30c3\u30c8\u306b\u3059\u308b\uff08\u3059\u3067\u306b\u516c\u958b\u3055\u308c\u305f\u30b3\u30df\u30c3\u30c8\u30ed\u30b0\u3092\u3057\u308c\u3063\u3068\u306a\u304f\u3059\u3067\u306f\u306a\u304f\u3001\u7406\u7531\u304c\u3042\u3063\u3066\u5143\u306b\u623b\u3057\u305f\u3068\u5206\u304b\u308b\u3088\u3046\u306b\u3059\u308b\uff09\n\n\n[git] \u7279\u5b9a\u306e\u30cf\u3099\u30fc\u30b7\u3099\u30e7\u30f3\uff08\u30bf\u30af\u3099\uff09\u306b\u5207\u308a\u66ff\u3048\u305f\u3044\n\n\nbranch\u3092\u4f5c\u3089\u305a\u306b\u3001\u30bf\u30b0\u306e\u53c2\u7167\u306e\u307f\u306e\u30c1\u30a7\u30c3\u30af\u30a2\u30a6\u30c8\u3059\u308b\u3053\u3068\u304c\u3067\u304d\u308b\n\n\n$ git pull origin master\n$ git pull --tags\n$ git tag\n$ git checkout refs/tags/1.3.1\n$ git branch\nrefs/tags/{{tagname}}",
+            "title": "Git"
+        },
+        {
+            "location": "/git/#git-git",
+            "text": "\u30e6\u30fc\u30b6\u540d\u30fb\u30e1\u30fc\u30eb\u30a2\u30c9\u30ec\u30b9\uff08push\u3059\u308b\u3068\u304d\u306b\u5fc5\u9808\uff09  $ git config --global user.name XXX\n$ git config --global user.email XXX@XXX.com  Mac\u306e\u5834\u5408\u3067\u3001\u30d1\u30b9\u30ef\u30fc\u30c9\u3067push\u3059\u308b\uff08ssh\u306e\u9375\u3067push\u3057\u306a\u3044\uff09\u5834\u5408\u3001osxkeychain\u306b\u4fdd\u5b58\u3059\u308b  $ git config --global credential.helper osxkeychain  ssh(git\u30d7\u30ed\u30c8\u30b3\u30eb)\u4f7f\u3048\u306a\u304f\u3066https\u7e1b\u308a\u306e\u5834\u5408\u3067\u3001\u3055\u3089\u306b\u30aa\u30ec\u30aa\u30ec\u8a3c\u660e\u66f8\u306e\u5834\u5408  $ git config --global http.sslverify false",
+            "title": "[git] git\u3067\u6700\u521d\u306b\u3084\u308b\u57fa\u672c\u8a2d\u5b9a"
+        },
+        {
+            "location": "/git/#git-adddiffcommit",
+            "text": "$ git diff --cached\n$ git diff --cached <\u30d5\u30a1\u30a4\u30eb\u30d1\u30b9>",
+            "title": "[git] add\u3057\u305f\u30d5\u30a1\u30a4\u30eb\u306ediff\u3092\u78ba\u8a8d\u3059\u308b(commit\u524d\uff09"
+        },
+        {
+            "location": "/git/#git-head",
+            "text": "$ git branch --delete foo",
+            "title": "[git] HEAD\u306b\u30de\u30fc\u30b7\u3099\u3057\u305f\u30d5\u3099\u30e9\u30f3\u30c1\u3092\u524a\u9664\u3057\u305f\u3044"
+        },
+        {
+            "location": "/git/#git-master",
+            "text": "\u901a\u5e38\u306e\u30d6\u30e9\u30f3\u30c1\u4f5c\u6210 \uff08\u4f8b\u3048\u3070 git checkout -b gh-pages\uff09 \u3067\u306f\u3001\u4f5c\u696d\u30c7\u30a3\u30ec\u30af\u30c8\u30ea\u306e\u5185\u5bb9\u304c\u5168\u3066\u5f15\u304d\u7d99\u304c\u308c\u3066\u3057\u307e\u3046\u3002\n\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u7ba1\u7406\u5c02\u7528\u30d6\u30e9\u30f3\u30c1\u3092\u4f5c\u6210\u3057\u305f\u3044\u3068\u3044\u3046\u8981\u4ef6\u306e\u5834\u5408\u3001master\u306e\u5185\u5bb9\u306f\u4e0d\u8981\u3002\u305d\u3046\u3044\u3046\u6642\u306f\u4ee5\u4e0b\u306e\u624b\u9806\u3067\u3067\u304d\u308b\u3002  e.g. staging\u74b0\u5883\u306e\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u516c\u958b\u7528\u30d6\u30e9\u30f3\u30c1(staging)\u3092\u4f5c\u6210\u3059\u308b  $ git clone https://github.com/humangas/x_document.git\n$ (master) cd x_document\n$ (master) git symbolic-ref HEAD refs/heads/staging\n$ (staging) rm .git/index\n$ (staging) git clean -fdx\n$ (staging) echo \"Hello\" > index.md\n$ (staging) git add -A\n$ (staging) git commit -m 'first commit'\n$ (staging) git push origin staging",
+            "title": "[git] master\u306e\u5185\u5bb9\u3092\u5f15\u304d\u7d99\u304b\u3099\u3059\u3099\u306b\u30d5\u3099\u30e9\u30f3\u30c1\u3092\u4f5c\u6210\u3057\u305f\u3044(\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u7ba1\u7406\u5c02\u7528\u30d6\u30e9\u30f3\u30c1\u4f5c\u6210\u306e\u5834\u5408\u306a\u3069)"
+        },
+        {
+            "location": "/git/#git-pusha",
+            "text": "$ git log origin/master..master  \u30d6\u30e9\u30f3\u30c1\u3092\u6307\u5b9a\u3059\u308b\u5834\u5408  $ git log origin/master..<branch>  \uff08\u9006\u306b\uff09\u30ea\u30e2\u30fc\u30c8\u306eorigin/master\u306b\u306e\u307f\u5b58\u5728\u3059\u308b\u30b3\u30df\u30c3\u30c8\u3092\u898b\u305f\u3044\u5834\u5408  git log master..origin/master  \u30ed\u30fc\u30ab\u30eb\u3060\u3051\u3082\u30ea\u30e2\u30fc\u30c8\u3060\u3051\u3082\u5408\u308f\u305b\u3066\u4e21\u65b9\u306e\u30b3\u30df\u30c3\u30c8\u30ed\u30b0\u3092\u8868\u793a(\u300c...\u300d\u304c\uff13\u3064\u306b\u306a\u3063\u3066\u3044\u308b)  $ git log origin/master...master  --left-right \u30aa\u30d7\u30b7\u30e7\u30f3\u3092\u4ed8\u3051\u308b\u3068\u3069\u306e\u30b3\u30df\u30c3\u30c8\u304c\u3069\u3063\u3061\u306e\u30d6\u30e9\u30f3\u30c1\u306b\u5b58\u5728\u3057\u3066\u3044\u308b\u304b\u3092\u78ba\u8a8d\u3067\u304d\u308b  $ git log --left-right master...origin/master",
+            "title": "[git] \u307e\u305f\u3099\u30ea\u30e2\u30fc\u30c8\u306bpush\u3057\u3066\u306a\u3044\u30ed\u30fc\u30ab\u00e3\u0083\u00ab\u30b3\u30df\u30c3\u30c8\u3092\u78ba\u8a8d\u3059\u308b"
+        },
+        {
+            "location": "/git/#git-diff",
+            "text": "$ git log\n# \u76ee\u7684\u306ecommit id\u3092\u30b3\u30d4\u30fc\n$ git show <commit id>",
+            "title": "[git] \u30b3\u30df\u30c3\u30c8\u3057\u305f\u30d5\u30a1\u30a4\u30eb\u306ediff\u3092\u898b\u305f\u3044"
+        },
+        {
+            "location": "/git/#git",
+            "text": "\u30de\u30fc\u30b8\u3057\u305f\u304b\u3069\u3046\u304b\u3092\u554f\u308f\u305a\u306b\u524a\u9664\u3059\u308b  $ git branch -D foo",
+            "title": "[git] \u30d5\u3099\u30e9\u30f3\u30c1\u3092\u5f37\u5236\u524a\u9664\u3057\u305f\u3044"
+        },
+        {
+            "location": "/git/#git_1",
+            "text": "\u30b3\u30ed\u30f3\u3092\u524d\u306b\u3064\u3051\u308b\uff08\u30ed\u30fc\u30ab\u30eb\u306f\u6b8b\u308b\u306e\u3067\u3001git branch -D foo \u3067\u524a\u9664\uff09  $ git push origin :new-feature\nTo https://source.developers.google.com/p/projectid/r/default\n - [deleted]         new-feature",
+            "title": "[git] \u30ea\u30e2\u30fc\u30c8\u30d6\u30e9\u30f3\u30c1\u3092\u524a\u9664\u3057\u305f\u3044"
+        },
+        {
+            "location": "/git/#git_2",
+            "text": "$ git branch --all\nmaster\nfoo\nbar\norigin/HEAD -> origin/master\norigin/foo\norigin/bar  \u30ea\u30e2\u30fc\u30c8\u3060\u3051\u53c2\u7167\u3059\u308b\u5834\u5408\u306f\u3001 --remote",
+            "title": "[git] \u3059\u3079\u3066\u306e\uff08\u30ed\u30fc\u30ab\u30eb\u30fb\u30ea\u30e2\u30fc\u30c8\uff09 \u30d6\u30e9\u30f3\u30c1\u3092\u8868\u793a\u3059\u308b"
+        },
+        {
+            "location": "/git/#git_3",
+            "text": "$ git log <\u30d5\u30a1\u30a4\u30eb\u30d1\u30b9>\n$ git checkout ad97721dbcf4e3d7f68305c714d673aaafc32637 <\u30d5\u30a1\u30a4\u30eb\u30d1\u30b9>",
+            "title": "[git] \u7279\u5b9a\u306e\u30b3\u30df\u30c3\u30c8\u305f\u3099\u3051\u623b\u3057\u305f\u3044"
+        },
+        {
+            "location": "/git/#git-reflogreset",
+            "text": "$ git reflog\n3e9e73e HEAD@{1}: reset: moving to HEAD@{6}\n8f19cec (HEAD -> master, origin/master, origin/canary, canary) HEAD@{2}: merge canary: Fast-forward\n787e3f4 HEAD@{3}: reset: moving to HEAD^\n\n$ git reset --hard HEAD@{2}  reflog: \u53c2\u7167\u30ed\u30b0\u3001\u904e\u53bb\u306e\u3042\u3089\u3086\u308b\u30b3\u30df\u30c3\u30c8\u5c65\u6b74\u3092\u307f\u308b\u3053\u3068\u304c\u3067\u304d\u3001\u4e0a\u8a18\u306e\u00e3\u0082\u0088\u3046\u306b\u6307\u5b9a\u3059\u308c\u3070\u305d\u3053\u307e\u3067\u623b\u308b\u3053\u3068\u304c\u3067\u304d\u308b \n\u30e6\u30fc\u30b9\u30b1\u30fc\u30b9: \u3042\u308b\u6642\u70b9\u304b\u3089\u306e\u30b3\u30df\u30c3\u30c8\u3092\u5168\u90e8\u3084\u308a\u76f4\u3057\u305f\u3044\u3068\u304d",
+            "title": "[git] \u30b3\u30df\u30c3\u30c8\u3092\u3084\u308a\u76f4\u3057\u305f\u3044\uff08\u3042\u306e\u6642\u306b\u623b\u308a\u305f\u3044\uff09: reflog\u3067\u78ba\u8a8d\u3057\u3066\u304b\u3089\u305d\u3053\u306breset\u3059\u308b"
+        },
+        {
+            "location": "/git/#git-revert",
+            "text": "$ git revert <commit id>  \u30e6\u30fc\u30b9\u30b1\u30fc\u30b9: \u30d0\u30b0\u306e\u539f\u56e0\u304c\u3042\u308b\u30b3\u30df\u30c3\u30c8\u306b\u8d77\u56e0\u3057\u3066\u304a\u308a\u3001\u305d\u308c\u3060\u3051\u9664\u304d\u305f\u3044\u3068\u304d \n\u5143\u306b\u623b\u3059\u304c\u3001\u5143\u306b\u623b\u3057\u305f\u3053\u3068\u3092\u65b0\u305f\u306a\u30b3\u30df\u30c3\u30c8\u306b\u3059\u308b\uff08\u3059\u3067\u306b\u516c\u958b\u3055\u308c\u305f\u30b3\u30df\u30c3\u30c8\u30ed\u30b0\u3092\u3057\u308c\u3063\u3068\u306a\u304f\u3059\u3067\u306f\u306a\u304f\u3001\u7406\u7531\u304c\u3042\u3063\u3066\u5143\u306b\u623b\u3057\u305f\u3068\u5206\u304b\u308b\u3088\u3046\u306b\u3059\u308b\uff09",
+            "title": "[git] \u7279\u5b9a\u306e\u30b3\u30df\u30c3\u30c8\u3060\u3051\u3092\u3084\u308a\u76f4\u3057\u305f\u3044\uff08\u53d6\u308a\u6d88\u3057\u7dda\u306e\u30a4\u30e1\u30fc\u30b8\uff09: revert"
+        },
+        {
+            "location": "/git/#git_4",
+            "text": "branch\u3092\u4f5c\u3089\u305a\u306b\u3001\u30bf\u30b0\u306e\u53c2\u7167\u306e\u307f\u306e\u30c1\u30a7\u30c3\u30af\u30a2\u30a6\u30c8\u3059\u308b\u3053\u3068\u304c\u3067\u304d\u308b  $ git pull origin master\n$ git pull --tags\n$ git tag\n$ git checkout refs/tags/1.3.1\n$ git branch\nrefs/tags/{{tagname}}",
+            "title": "[git] \u7279\u5b9a\u306e\u30cf\u3099\u30fc\u30b7\u3099\u30e7\u30f3\uff08\u30bf\u30af\u3099\uff09\u306b\u5207\u308a\u66ff\u3048\u305f\u3044"
+        },
+        {
+            "location": "/grep/",
+            "text": "[grep] grep\u3057\u305f\u7d50\u679c\u30921\u30d5\u30a1\u30a4\u30eb\u306b\u307e\u3068\u3081\u305f\u3044\n\n\n/var/log/messages* \u306b\u51fa\u529b\u3055\u308c\u3066\u3044\u308b\u30a8\u30e9\u30fc\u3092\u4e00\u3064\u306e\u30d5\u30a1\u30a4\u30eb\u306b\u307e\u3068\u3081\u308b\n\n\n$ cd /var/log\n$ for v in `ls messages*`; do echo $v; sudo egrep '\\serr|\\scrit|\\semerg' $v >> ~/messages.err; done",
+            "title": "Grep"
+        },
+        {
+            "location": "/grep/#grep-grep1",
+            "text": "/var/log/messages* \u306b\u51fa\u529b\u3055\u308c\u3066\u3044\u308b\u30a8\u30e9\u30fc\u3092\u4e00\u3064\u306e\u30d5\u30a1\u30a4\u30eb\u306b\u307e\u3068\u3081\u308b  $ cd /var/log\n$ for v in `ls messages*`; do echo $v; sudo egrep '\\serr|\\scrit|\\semerg' $v >> ~/messages.err; done",
+            "title": "[grep] grep\u3057\u305f\u7d50\u679c\u30921\u30d5\u30a1\u30a4\u30eb\u306b\u307e\u3068\u3081\u305f\u3044"
+        },
+        {
+            "location": "/investigate/",
+            "text": "[linux] Linux\u3067\u30d7\u30ed\u30bb\u30b9\u304c\u4f55\u306e\u30dd\u30fc\u30c8\u3092\u4f7f\u3063\u3066\u3044\u308b\u304b\uff1f\n\n\nLinux\u3067\u30d7\u30ed\u30bb\u30b9\u304c\u4f55\u306e\u30dd\u30fc\u30c8\u4f7f\u3063\u3066\u3044\u308b\u304b\u3092\u8abf\u3079\u308b\n\n\n[linux] Linux\u30d1\u30d5\u30a9\u30fc\u30de\u30f3\u30b9\u8abf\u67fb\u30b3\u30de\u30f3\u30c9\n\n\nLinux\u30d1\u30d5\u30a9\u30fc\u30de\u30f3\u30b9\u8abf\u67fb\u306a\u3069\u3067\u4f7f\u3046\u30b3\u30de\u30f3\u30c9\u30e1\u30e2",
+            "title": "Investigate"
+        },
+        {
+            "location": "/investigate/#linux-linux",
+            "text": "Linux\u3067\u30d7\u30ed\u30bb\u30b9\u304c\u4f55\u306e\u30dd\u30fc\u30c8\u4f7f\u3063\u3066\u3044\u308b\u304b\u3092\u8abf\u3079\u308b",
+            "title": "[linux] Linux\u3067\u30d7\u30ed\u30bb\u30b9\u304c\u4f55\u306e\u30dd\u30fc\u30c8\u3092\u4f7f\u3063\u3066\u3044\u308b\u304b\uff1f"
+        },
+        {
+            "location": "/investigate/#linux-linux_1",
+            "text": "Linux\u30d1\u30d5\u30a9\u30fc\u30de\u30f3\u30b9\u8abf\u67fb\u306a\u3069\u3067\u4f7f\u3046\u30b3\u30de\u30f3\u30c9\u30e1\u30e2",
+            "title": "[linux] Linux\u30d1\u30d5\u30a9\u30fc\u30de\u30f3\u30b9\u8abf\u67fb\u30b3\u30de\u30f3\u30c9"
+        },
+        {
+            "location": "/less/",
+            "text": "[less] less\u3067\u3088\u304f\u4f7f\u3046\u64cd\u4f5c\n\n\n\u958b\u304f\u524d\u306b:\n\n\n\n\nless +F file: = tail -f file  \n\u3067\u901a\u5e38less\u30e2\u30fc\u30c9\u306b\n\n\n\n\n\u958b\u3044\u305f\u5f8c\u306b:\n\n\n\n\n: tail -f \u30e2\u30fc\u30c9\n\n\n: \u60c5\u5831\u8868\u793a\uff08\u30e9\u30a4\u30f3\u3001\u30d5\u30a1\u30a4\u30eb\u30b5\u30a4\u30ba\uff09\n\n\ne.g. log/xxx.log lines 1-11/11 byte 1054/1054 (END)   (press RETURN)\n\n\n\n\n\n\n!\n: \u30b3\u30de\u30f3\u30c9\u30e2\u30fc\u30c9\uff08exit\u306bless\u306b\u623b\u308b\uff09\n\n\n!{command}: \u30b3\u30de\u30f3\u30c9\u5b9f\u884c\n\n\nv: \u305d\u306e\u30d5\u30a1\u30a4\u30eb\u3092vim\u3067\u958b\u304f\n\n\n-N: \u884c\u756a\u53f7\u8868\u793a\uff08\u3082\u3046\u4e00\u56de\u3084\u308b\u3068\u623b\u308b\uff09\n\n\n-M: \u8a73\u7d30\u8868\u793a\uff08\u3082\u3046\u4e00\u56de\u3084\u308b\u3068\u623b\u308b\uff09\n\n\n&{word} {word}\u3067grep\u3057\u305f\u7d50\u679c\u3060\u3051\u30d5\u30a3\u30eb\u30bf\u30ea\u30f3\u30b0\uff08&\n\u3067\u5143\u901a\u308a\uff09\n\n\n:e {file} \u65b0\u898f\u306b\u30d5\u30a1\u30a4\u30eb\u3092\u958b\u304f\uff08\u30d5\u30a1\u30a4\u30eb\u3092\u6307\u5b9a\u3057\u306a\u3044\u5834\u5408\u306f\u73fe\u5728\u306e\u30d5\u30a1\u30a4\u30eb\u3092\u8aad\u307f\u76f4\u3059\uff09\n\n\n:n \u6b21\u306e\u30d5\u30a1\u30a4\u30eb\n\n\n:p \u524d\u306e\u30d5\u30a1\u30a4\u30eb\n\n\n:x \u5148\u982d\u306e\u30d5\u30a1\u30a4\u30eb",
+            "title": "Less"
+        },
+        {
+            "location": "/less/#less-less",
+            "text": "\u958b\u304f\u524d\u306b:   less +F file: = tail -f file   \u3067\u901a\u5e38less\u30e2\u30fc\u30c9\u306b   \u958b\u3044\u305f\u5f8c\u306b:   : tail -f \u30e2\u30fc\u30c9  : \u60c5\u5831\u8868\u793a\uff08\u30e9\u30a4\u30f3\u3001\u30d5\u30a1\u30a4\u30eb\u30b5\u30a4\u30ba\uff09  e.g. log/xxx.log lines 1-11/11 byte 1054/1054 (END)   (press RETURN)    ! : \u30b3\u30de\u30f3\u30c9\u30e2\u30fc\u30c9\uff08exit\u306bless\u306b\u623b\u308b\uff09  !{command}: \u30b3\u30de\u30f3\u30c9\u5b9f\u884c  v: \u305d\u306e\u30d5\u30a1\u30a4\u30eb\u3092vim\u3067\u958b\u304f  -N: \u884c\u756a\u53f7\u8868\u793a\uff08\u3082\u3046\u4e00\u56de\u3084\u308b\u3068\u623b\u308b\uff09  -M: \u8a73\u7d30\u8868\u793a\uff08\u3082\u3046\u4e00\u56de\u3084\u308b\u3068\u623b\u308b\uff09  &{word} {word}\u3067grep\u3057\u305f\u7d50\u679c\u3060\u3051\u30d5\u30a3\u30eb\u30bf\u30ea\u30f3\u30b0\uff08& \u3067\u5143\u901a\u308a\uff09  :e {file} \u65b0\u898f\u306b\u30d5\u30a1\u30a4\u30eb\u3092\u958b\u304f\uff08\u30d5\u30a1\u30a4\u30eb\u3092\u6307\u5b9a\u3057\u306a\u3044\u5834\u5408\u306f\u73fe\u5728\u306e\u30d5\u30a1\u30a4\u30eb\u3092\u8aad\u307f\u76f4\u3059\uff09  :n \u6b21\u306e\u30d5\u30a1\u30a4\u30eb  :p \u524d\u306e\u30d5\u30a1\u30a4\u30eb  :x \u5148\u982d\u306e\u30d5\u30a1\u30a4\u30eb",
+            "title": "[less] less\u3067\u3088\u304f\u4f7f\u3046\u64cd\u4f5c"
+        },
+        {
+            "location": "/ln/",
+            "text": "[ln] \u30b7\u30f3\u30dc\u30ea\u30c3\u30af\u5148\u306e\u5b9f\u30d1\u30b9\u3092\u53d6\u5f97\n\n\n$ ll ~/.pyenv/versions/361_chrome-headless\nlrwxr-xr-x 1 humangas staff 62  8 24 22:43 /Users/humangas/.pyenv/versions/361_chrome-headless -> /Users/humangas/.pyenv/versions/3.6.1/envs/361_chrome-headless\n$ readlink ~/.pyenv/versions/361_chrome-headless\n/Users/humangas/.pyenv/versions/3.6.1/envs/361_chrome-headless",
+            "title": "Ln"
+        },
+        {
+            "location": "/ln/#ln",
+            "text": "$ ll ~/.pyenv/versions/361_chrome-headless\nlrwxr-xr-x 1 humangas staff 62  8 24 22:43 /Users/humangas/.pyenv/versions/361_chrome-headless -> /Users/humangas/.pyenv/versions/3.6.1/envs/361_chrome-headless\n$ readlink ~/.pyenv/versions/361_chrome-headless\n/Users/humangas/.pyenv/versions/3.6.1/envs/361_chrome-headless",
+            "title": "[ln] \u30b7\u30f3\u30dc\u30ea\u30c3\u30af\u5148\u306e\u5b9f\u30d1\u30b9\u3092\u53d6\u5f97"
+        },
+        {
+            "location": "/ls/",
+            "text": "[ls] \u30bf\u30a4\u30e0\u30b9\u30bf\u30f3\u30d7\u9806\u3067\u8868\u793a\u3057\u305f\u3044\n\n\n\n\nls -lt: \u30bf\u30a4\u30e0\u30b9\u30bf\u30f3\u30d7\u9806\uff08ls -ltr \u3067\u9006\u9806\uff09\n\n\nls -lv: \u30d0\u30fc\u30b8\u30e7\u30f3\u9806",
+            "title": "Ls"
+        },
+        {
+            "location": "/ls/#ls",
+            "text": "ls -lt: \u30bf\u30a4\u30e0\u30b9\u30bf\u30f3\u30d7\u9806\uff08ls -ltr \u3067\u9006\u9806\uff09  ls -lv: \u30d0\u30fc\u30b8\u30e7\u30f3\u9806",
+            "title": "[ls] \u30bf\u30a4\u30e0\u30b9\u30bf\u30f3\u30d7\u9806\u3067\u8868\u793a\u3057\u305f\u3044"
+        },
+        {
+            "location": "/mac/",
+            "text": "[mac|top] Mac\u306etop\u3067CPU\u9806\u306e\u30bd\u30fc\u30c8\n\n\n$ top\no\ncpu<CR>\n\n\n\n\n[mac] Mac\u306eFinder\u3067\u30ab\u30e9\u30e0\u5e45\u3092\u4fdd\u5b58\u3059\u308b\n\n\noption\u3092\u62bc\u3057\u306a\u304c\u3089\u753b\u9762\u30b5\u30a4\u30ba\u5909\u66f4\u3057\u305f\u308a\u3001|\u7dda\u3092\u30c9\u30e9\u30c3\u30b0\u3057\u3066\u30ab\u30e9\u30e0\u5e45\u5909\u3048\u305f\u308a\u3059\u308b\u00e3\u0081\u00a8\u4fdd\u5b58\u3067\u304d\u308b\u3002\n\n\n[mac|zip] Mac\u3067\u30b3\u30de\u30f3\u30c9\u3067ZIP\u5727\u7e2e\u3059\u308b\n\n\ne.g. DS_Store \u3092\u542b\u3081\u306a\u3044\u3067\u5727\u7e2e\u3059\u308b\n\n\n$ zip -r hogehoge.zip * -x *.DS_Store\n\n\n\n\n\u6697\u53f7\u5316ZIP\u306b\u3059\u308b\uff08e\u30aa\u30d7\u30b7\u30e7\u30f3\u3092\u4ed8\u3051\u308b\uff09\n\n\n$ zip -er hogehoge.zip * -x *.DS_Store\nEnter password:\nVerify password:",
+            "title": "Mac"
+        },
+        {
+            "location": "/mac/#mactop-mactopcpu",
+            "text": "$ top\no\ncpu<CR>",
+            "title": "[mac|top] Mac\u306etop\u3067CPU\u9806\u306e\u30bd\u30fc\u30c8"
+        },
+        {
+            "location": "/mac/#mac-macfinder",
+            "text": "option\u3092\u62bc\u3057\u306a\u304c\u3089\u753b\u9762\u30b5\u30a4\u30ba\u5909\u66f4\u3057\u305f\u308a\u3001|\u7dda\u3092\u30c9\u30e9\u30c3\u30b0\u3057\u3066\u30ab\u30e9\u30e0\u5e45\u5909\u3048\u305f\u308a\u3059\u308b\u00e3\u0081\u00a8\u4fdd\u5b58\u3067\u304d\u308b\u3002",
+            "title": "[mac] Mac\u306eFinder\u3067\u30ab\u30e9\u30e0\u5e45\u3092\u4fdd\u5b58\u3059\u308b"
+        },
+        {
+            "location": "/mac/#maczip-maczip",
+            "text": "e.g. DS_Store \u3092\u542b\u3081\u306a\u3044\u3067\u5727\u7e2e\u3059\u308b  $ zip -r hogehoge.zip * -x *.DS_Store  \u6697\u53f7\u5316ZIP\u306b\u3059\u308b\uff08e\u30aa\u30d7\u30b7\u30e7\u30f3\u3092\u4ed8\u3051\u308b\uff09  $ zip -er hogehoge.zip * -x *.DS_Store\nEnter password:\nVerify password:",
+            "title": "[mac|zip] Mac\u3067\u30b3\u30de\u30f3\u30c9\u3067ZIP\u5727\u7e2e\u3059\u308b"
+        },
+        {
+            "location": "/oracle/",
+            "text": "[oracle] Oracle\u3067\u30e6\u30fc\u30b6\u30fc\u4f5c\u6210\u3068\u306f\u3058\u3081\u306b\u3064\u3051\u308b\u6a29\u9650\n\n\n\uff08\u305d\u306e\u30e6\u30fc\u30b6\u30fc\u3067\u30c6\u30fc\u30d6\u30eb\u4f5c\u3063\u305f\u308a\u8272\u3005\u3084\u308b\u305f\u3081\u306b\uff09\n\n1) \u30e6\u30fc\u30b6\u30fc\uff08= \u30b9\u30ad\u30fc\u30de\uff09\u4f5c\u6210\u3068\u540c\u6642\u306b\u30d1\u30b9\u30ef\u30fc\u30c9\u3044\u308b\n\n\ncreate user XXX identified by \"PASSWORD\";\n-- \u30c6\u30fc\u30d6\u30eb\u30b9\u30da\u30fc\u30b9\u3068\u304b\u3082\u6307\u5b9a\u3057\u305f\u3084\u3064\ncreate user XXX identified by \"PASSWORD\" default tablespace USER temporary tablespace USERTEMP profile DEFAULT;\n\n\n\n\n2) \u305d\u3044\u3064\u304cINSERT\u3068\u304b\u3059\u308b\u6642\u3001\u30c6\u30fc\u30d6\u30eb\u30b9\u30da\u30fc\u30b9\u306b\u66f8\u304d\u8fbc\u3081\u306a\u3044\u3068\u30a8\u30e9\u30fc\u3067\u308b\n\n\nalter user XXX quota unlimited on USER;\n\n\n\n\n3) \u6a29\u9650\u3064\u3051\u308b\n\n\n-- connect\u304c\u7121\u3044\u3068\u30bb\u30c3\u30b7\u30e7\u30f3\u304c\u5f35\u308c\u306a\u3044\u306e\u3067\u30ed\u30b0\u30a4\u30f3\u3067\u304d\u306a\u3044\u3002\u7bb1\u30b9\u30ad\u30fc\u30de\u3067\u4ed6\u304b\u3089\u5229\u7528\u3055\u308c\u308b\u3060\u3051\u3042\u308c\u3070\u4e0d\u8981\ngrant connect to XXX\n\n\n\n\n4) CREATE TABLE\u306a\u3069\u6253\u3066\u308b\u3088\u3046\u306b\u306a\u308b\n\n\ngrant create any table to XXX\n\n\n\n\n5) \u30ed\u30fc\u30eb\u3092\u4ed8\u4e0e\u3059\u308b\u5834\u5408\n\n\ngrant ROLE_XXX TO XXX;",
+            "title": "Oracle"
+        },
+        {
+            "location": "/oracle/#oracle-oracle",
+            "text": "\uff08\u305d\u306e\u30e6\u30fc\u30b6\u30fc\u3067\u30c6\u30fc\u30d6\u30eb\u4f5c\u3063\u305f\u308a\u8272\u3005\u3084\u308b\u305f\u3081\u306b\uff09 \n1) \u30e6\u30fc\u30b6\u30fc\uff08= \u30b9\u30ad\u30fc\u30de\uff09\u4f5c\u6210\u3068\u540c\u6642\u306b\u30d1\u30b9\u30ef\u30fc\u30c9\u3044\u308b  create user XXX identified by \"PASSWORD\";\n-- \u30c6\u30fc\u30d6\u30eb\u30b9\u30da\u30fc\u30b9\u3068\u304b\u3082\u6307\u5b9a\u3057\u305f\u3084\u3064\ncreate user XXX identified by \"PASSWORD\" default tablespace USER temporary tablespace USERTEMP profile DEFAULT;  2) \u305d\u3044\u3064\u304cINSERT\u3068\u304b\u3059\u308b\u6642\u3001\u30c6\u30fc\u30d6\u30eb\u30b9\u30da\u30fc\u30b9\u306b\u66f8\u304d\u8fbc\u3081\u306a\u3044\u3068\u30a8\u30e9\u30fc\u3067\u308b  alter user XXX quota unlimited on USER;  3) \u6a29\u9650\u3064\u3051\u308b  -- connect\u304c\u7121\u3044\u3068\u30bb\u30c3\u30b7\u30e7\u30f3\u304c\u5f35\u308c\u306a\u3044\u306e\u3067\u30ed\u30b0\u30a4\u30f3\u3067\u304d\u306a\u3044\u3002\u7bb1\u30b9\u30ad\u30fc\u30de\u3067\u4ed6\u304b\u3089\u5229\u7528\u3055\u308c\u308b\u3060\u3051\u3042\u308c\u3070\u4e0d\u8981\ngrant connect to XXX  4) CREATE TABLE\u306a\u3069\u6253\u3066\u308b\u3088\u3046\u306b\u306a\u308b  grant create any table to XXX  5) \u30ed\u30fc\u30eb\u3092\u4ed8\u4e0e\u3059\u308b\u5834\u5408  grant ROLE_XXX TO XXX;",
+            "title": "[oracle] Oracle\u3067\u30e6\u30fc\u30b6\u30fc\u4f5c\u6210\u3068\u306f\u3058\u3081\u306b\u3064\u3051\u308b\u6a29\u9650"
+        },
+        {
+            "location": "/shell/",
+            "text": "[shell] \u3042\u308b\u30c7\u30a3\u30ec\u30af\u30c8\u30ea\u914d\u4e0b\u306e\u30d5\u30a1\u30a4\u30eb\u6570\u3092\u30ab\u30a6\u30f3\u30c8\u3059\u308b\n\n\n$ for l in `ls $PWD`; do echo -n \"$l :\"; ls -l $l/logs/ | wc -l; done\nd361249ed354 :35\nd4e89bf5cc4c :12673\nbbef53f8b3bb :3\n\n$ tree\n.\n\u251c\u2500\u2500 d361249ed354\n\u2502   \u2514\u2500\u2500 logs\n\u251c\u2500\u2500 d4e89bf5cc4c\n\u2502   \u2514\u2500\u2500 logs\n\u2514\u2500\u2500 bbef53f8b3bb\n    \u2514\u2500\u2500 logs",
+            "title": "Shell"
+        },
+        {
+            "location": "/shell/#shell",
+            "text": "$ for l in `ls $PWD`; do echo -n \"$l :\"; ls -l $l/logs/ | wc -l; done\nd361249ed354 :35\nd4e89bf5cc4c :12673\nbbef53f8b3bb :3\n\n$ tree\n.\n\u251c\u2500\u2500 d361249ed354\n\u2502   \u2514\u2500\u2500 logs\n\u251c\u2500\u2500 d4e89bf5cc4c\n\u2502   \u2514\u2500\u2500 logs\n\u2514\u2500\u2500 bbef53f8b3bb\n    \u2514\u2500\u2500 logs",
+            "title": "[shell] \u3042\u308b\u30c7\u30a3\u30ec\u30af\u30c8\u30ea\u914d\u4e0b\u306e\u30d5\u30a1\u30a4\u30eb\u6570\u3092\u30ab\u30a6\u30f3\u30c8\u3059\u308b"
+        },
+        {
+            "location": "/tmux/",
+            "text": "[tmux] tmux\u3067\u3088\u304f\u4f7f\u3046\u64cd\u4f5c\n\n\n\u4ee5\u4e0b\u306f\u5168\u90e8\u30d7\u30ec\u30d5\u30a3\u30c3\u30af\u30b9\u30ad\u30fc\uff08\n\uff09\u306b\u52a0\u3048\u3066\u62bc\u4e0b\u3059\u308b\u30ad\u30fc\u3068\u3044\u3046\u3053\u3068\u3002\n\n\n\n\n\u30a6\u30a3\u30f3\u30c9\u30a6\u4e00\u89a7\uff1aw\n\n\n\u30a6\u30a3\u30f3\u30c9\u30a6\u30b8\u30e3\u30f3\u30d7\uff1a0-9\n\n\n\u30a6\u30a3\u30f3\u30c9\u30a6\u79fb\u52d5\uff1an\uff08\u6b21\uff09\u3001p\uff08\u524d\uff09\u3001l\uff08\u4ee5\u524d\u306e\uff09\n\n\n\u30da\u30a4\u30f3\u306e\u7834\u68c4\uff1ax\n\n\n\u30da\u30a4\u30f3\u5206\u5272\uff1a%\uff08\u5de6\u53f3\uff09\u3001\"\uff08\u4e0a\u4e0b\uff09\n\n\n\u30da\u30a4\u30f3\u79fb\u52d5\uff1ao\uff08\u6b21\uff09\u3001;\uff08\u4ee5\u524d\u306e\uff09\n\n\n\u30da\u30a4\u30f3\u306e\u6700\u5927\u5316/\u5fa9\u5e30\uff1az\n\n\n\u30b3\u30d4\u30fc\u30e2\u30fc\u30c9\uff1a[\uff08\u958b\u59cb\uff09\u2192  \n\uff08\u958b\u59cb\u4f4d\u7f6e\u6c7a\u5b9a\uff09\u2192 \n\uff08\u7d42\u4e86\u4f4d\u7f6e\u6c7a\u5b9a\uff09\u2192 ]\uff08\u8cbc\u4ed8\u3051\uff09",
+            "title": "Tmux"
+        },
+        {
+            "location": "/tmux/#tmux-tmux",
+            "text": "\u4ee5\u4e0b\u306f\u5168\u90e8\u30d7\u30ec\u30d5\u30a3\u30c3\u30af\u30b9\u30ad\u30fc\uff08 \uff09\u306b\u52a0\u3048\u3066\u62bc\u4e0b\u3059\u308b\u30ad\u30fc\u3068\u3044\u3046\u3053\u3068\u3002   \u30a6\u30a3\u30f3\u30c9\u30a6\u4e00\u89a7\uff1aw  \u30a6\u30a3\u30f3\u30c9\u30a6\u30b8\u30e3\u30f3\u30d7\uff1a0-9  \u30a6\u30a3\u30f3\u30c9\u30a6\u79fb\u52d5\uff1an\uff08\u6b21\uff09\u3001p\uff08\u524d\uff09\u3001l\uff08\u4ee5\u524d\u306e\uff09  \u30da\u30a4\u30f3\u306e\u7834\u68c4\uff1ax  \u30da\u30a4\u30f3\u5206\u5272\uff1a%\uff08\u5de6\u53f3\uff09\u3001\"\uff08\u4e0a\u4e0b\uff09  \u30da\u30a4\u30f3\u79fb\u52d5\uff1ao\uff08\u6b21\uff09\u3001;\uff08\u4ee5\u524d\u306e\uff09  \u30da\u30a4\u30f3\u306e\u6700\u5927\u5316/\u5fa9\u5e30\uff1az  \u30b3\u30d4\u30fc\u30e2\u30fc\u30c9\uff1a[\uff08\u958b\u59cb\uff09\u2192   \uff08\u958b\u59cb\u4f4d\u7f6e\u6c7a\u5b9a\uff09\u2192  \uff08\u7d42\u4e86\u4f4d\u7f6e\u6c7a\u5b9a\uff09\u2192 ]\uff08\u8cbc\u4ed8\u3051\uff09",
+            "title": "[tmux] tmux\u3067\u3088\u304f\u4f7f\u3046\u64cd\u4f5c"
+        },
+        {
+            "location": "/vim/",
+            "text": "[vim] \u30bf\u30d6\u3092\u958b\u304f\u30fb\u79fb\u52d5\u3059\u308b\n\n\n\n\n:tabe \u65b0\u898f\u30bf\u30d6\u3064\u304f\u308b\n\n\ngt(\u524d\u306e\u30bf\u30d6\uff09\u3001gT\uff08\u5f8c\u308d\u306e\u30bf\u30d6\uff09\u306b\u79fb\u52d5\n\n\n\n\n[vim] \u30d1\u30b9\u30ea\u30f3\u30af\u3092\u30c0\u30a4\u30ec\u30af\u30c8\u306b\u958b\u304f\n\n\n\n\ngx: \u30d6\u30e9\u30a6\u30b6\u3067\u958b\u304f\n\n\ngf: vim\u4e0a\u3067\u305d\u306e\u30d5\u30a1\u30a4\u30eb\u30d1\u30b9\u306e\u30d5\u30a1\u30a4\u30eb\u3092\u305d\u306e\u307e\u307e\u958b\u304f\uff08URL\u3067\u3042\u308c\u3070\u3001HTML\u30bd\u30fc\u30b9\u304c\u305d\u306e\u307e\u307e\u898b\u3048\u308b\uff09\n\n\n\n\n[vim] vim\u3067\u30ea\u30ed\u30fc\u30c9\n\n\n\n\n:e!\n\n\n\n\n[vim] ,\u3092\u6539\u884c\u306b\u7f6e\u63db\u3059\u308b\n\n\n1\u884c\u306ecsv\u3092\u7e26\u306b\u5217\u6319\u3057\u305f\u3044\u3068\u304d\u306a\u3069\u306b\n\nPoint: ^M \u306f\u00e3\u0080\u0081\n\n\n:%s/,/^M/gc\n\n\n\n\n[vim] vim\u3067diff\u3059\u308b\n\n\nvim \u306bdiff\u304c\u51fa\u308b\n\n\n$ vifdiff file1 file2\n\n\n\n\n[vim] \u73fe\u5728\u306e\u30d0\u30c3\u30d5\u30a1\u30922\u753b\u9762\u3067diff\u3059\u308b\n\n\n:windo diffthis\n\n\n\n\n[vim] \u7a7a\u767d\u3092\u9664\u304f\n\n\n:v/\\S/d",
+            "title": "Vim"
+        },
+        {
+            "location": "/vim/#vim",
+            "text": ":tabe \u65b0\u898f\u30bf\u30d6\u3064\u304f\u308b  gt(\u524d\u306e\u30bf\u30d6\uff09\u3001gT\uff08\u5f8c\u308d\u306e\u30bf\u30d6\uff09\u306b\u79fb\u52d5",
+            "title": "[vim] \u30bf\u30d6\u3092\u958b\u304f\u30fb\u79fb\u52d5\u3059\u308b"
+        },
+        {
+            "location": "/vim/#vim_1",
+            "text": "gx: \u30d6\u30e9\u30a6\u30b6\u3067\u958b\u304f  gf: vim\u4e0a\u3067\u305d\u306e\u30d5\u30a1\u30a4\u30eb\u30d1\u30b9\u306e\u30d5\u30a1\u30a4\u30eb\u3092\u305d\u306e\u307e\u307e\u958b\u304f\uff08URL\u3067\u3042\u308c\u3070\u3001HTML\u30bd\u30fc\u30b9\u304c\u305d\u306e\u307e\u307e\u898b\u3048\u308b\uff09",
+            "title": "[vim] \u30d1\u30b9\u30ea\u30f3\u30af\u3092\u30c0\u30a4\u30ec\u30af\u30c8\u306b\u958b\u304f"
+        },
+        {
+            "location": "/vim/#vim-vim",
+            "text": ":e!",
+            "title": "[vim] vim\u3067\u30ea\u30ed\u30fc\u30c9"
+        },
+        {
+            "location": "/vim/#vim_2",
+            "text": "1\u884c\u306ecsv\u3092\u7e26\u306b\u5217\u6319\u3057\u305f\u3044\u3068\u304d\u306a\u3069\u306b \nPoint: ^M \u306f\u00e3\u0080\u0081  :%s/,/^M/gc",
+            "title": "[vim] ,\u3092\u6539\u884c\u306b\u7f6e\u63db\u3059\u308b"
+        },
+        {
+            "location": "/vim/#vim-vimdiff",
+            "text": "vim \u306bdiff\u304c\u51fa\u308b  $ vifdiff file1 file2",
+            "title": "[vim] vim\u3067diff\u3059\u308b"
+        },
+        {
+            "location": "/vim/#vim-2diff",
+            "text": ":windo diffthis",
+            "title": "[vim] \u73fe\u5728\u306e\u30d0\u30c3\u30d5\u30a1\u30922\u753b\u9762\u3067diff\u3059\u308b"
+        },
+        {
+            "location": "/vim/#vim_3",
+            "text": ":v/\\S/d",
+            "title": "[vim] \u7a7a\u767d\u3092\u9664\u304f"
+        },
+        {
+            "location": "/watch/",
+            "text": "[watch] \u5dee\u5206\u3092\u30cf\u30a4\u30e9\u30a4\u30c8\u3059\u308b \u30d8\u30c3\u30c0\u30fc\u306f\u975e\u8868\u793a\u3067\n\n\n$ watch -t -d \"<command>\"\n\n\n\n\n\\<command> \u304c\u3001\u30d1\u30a4\u30d7\u3092\u542b\u3080\u5834\u5408\u306f\u3001\u30c0\u30d6\u30eb\u30af\u30a9\u30fc\u30c6\u30fc\u30b7\u30e7\u30f3\u3067\u56f2\u3080\n\n\nOptions:\n- -n \n: \u5b9f\u884c\u9593\u9694\u3092\u79d2\u5358\u4f4d\u3067\u6307\u5b9a\n- g: \u5909\u5316\u304c\u3042\u3063\u305f\u5834\u5408\u306f\u7d42\u4e86\n- c: \u30ab\u30e9\u30fc\u8868\u793a\n- t: \u30d8\u30c3\u30c0\u30fc\u975e\u8868\u793a\n- d: \u5909\u66f4\u70b9\u3092\u30cf\u30a4\u30e9\u30a4\u30c8\u8868\u793a",
+            "title": "Watch"
+        },
+        {
+            "location": "/watch/#watch",
+            "text": "$ watch -t -d \"<command>\"  \\<command> \u304c\u3001\u30d1\u30a4\u30d7\u3092\u542b\u3080\u5834\u5408\u306f\u3001\u30c0\u30d6\u30eb\u30af\u30a9\u30fc\u30c6\u30fc\u30b7\u30e7\u30f3\u3067\u56f2\u3080  Options:\n- -n  : \u5b9f\u884c\u9593\u9694\u3092\u79d2\u5358\u4f4d\u3067\u6307\u5b9a\n- g: \u5909\u5316\u304c\u3042\u3063\u305f\u5834\u5408\u306f\u7d42\u4e86\n- c: \u30ab\u30e9\u30fc\u8868\u793a\n- t: \u30d8\u30c3\u30c0\u30fc\u975e\u8868\u793a\n- d: \u5909\u66f4\u70b9\u3092\u30cf\u30a4\u30e9\u30a4\u30c8\u8868\u793a",
+            "title": "[watch] \u5dee\u5206\u3092\u30cf\u30a4\u30e9\u30a4\u30c8\u3059\u308b \u30d8\u30c3\u30c0\u30fc\u306f\u975e\u8868\u793a\u3067"
+        },
+        {
+            "location": "/aws/iam/",
+            "text": "[aws] IAM\u30e6\u30fc\u30b6\u30fc\u4e00\u89a7\u53d6\u5f97\u3059\u308b\n\n\n\u500b\u4eba\u30e6\u30fc\u30b6\u306bu_\u304b\u3089\u59cb\u307e\u308b\u3068\u3044\u3046\u547d\u540d\u898f\u5247\u3092\u3064\u3051\u305f\u5834\u5408\n\n\n$ aws iam list-users | jq -r '.Users[].UserName' | grep -e '^u_.*'\nu_xxx_yyy\nu_zzz_aaa\nu_hogehoge_x\n\n\n\n\n\u4eba\u6570\u78ba\u8a8d\n\n\n$ aws iam list-users | jq -r '.Users[].UserName' | grep -e '^u_.*' | wc -l\n3\n\n\n\n\n\u500b\u4eba\u30e6\u30fc\u30b6\u4ee5\u5916\u306e\u30e6\u30fc\u30b6\u4e00\u89a7\n\n\n$ aws iam list-users | jq -r '.Users[].UserName' | grep -v '^u_.*'\nbackup\nawsclouduser\nec2_user",
+            "title": "Iam"
+        },
+        {
+            "location": "/aws/iam/#aws-iam",
+            "text": "\u500b\u4eba\u30e6\u30fc\u30b6\u306bu_\u304b\u3089\u59cb\u307e\u308b\u3068\u3044\u3046\u547d\u540d\u898f\u5247\u3092\u3064\u3051\u305f\u5834\u5408  $ aws iam list-users | jq -r '.Users[].UserName' | grep -e '^u_.*'\nu_xxx_yyy\nu_zzz_aaa\nu_hogehoge_x  \u4eba\u6570\u78ba\u8a8d  $ aws iam list-users | jq -r '.Users[].UserName' | grep -e '^u_.*' | wc -l\n3  \u500b\u4eba\u30e6\u30fc\u30b6\u4ee5\u5916\u306e\u30e6\u30fc\u30b6\u4e00\u89a7  $ aws iam list-users | jq -r '.Users[].UserName' | grep -v '^u_.*'\nbackup\nawsclouduser\nec2_user",
+            "title": "[aws] IAM\u30e6\u30fc\u30b6\u30fc\u4e00\u89a7\u53d6\u5f97\u3059\u308b"
+        },
+        {
+            "location": "/aws/s3/",
+            "text": "[aws] S3\u30d0\u30b1\u30c3\u30c8\u4e00\u89a7\u3092\u53d6\u5f97\u3059\u308b\n\n\n$ aws s3 ls | awk '{print $3}'\nbucket_1\nbucket_2\nbucket_3",
+            "title": "S3"
+        },
+        {
+            "location": "/aws/s3/#aws-s3",
+            "text": "$ aws s3 ls | awk '{print $3}'\nbucket_1\nbucket_2\nbucket_3",
+            "title": "[aws] S3\u30d0\u30b1\u30c3\u30c8\u4e00\u89a7\u3092\u53d6\u5f97\u3059\u308b"
+        }
+    ]
+}
