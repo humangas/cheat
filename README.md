@@ -1,4 +1,5 @@
 # cheat
+[![CircleCI](https://circleci.com/gh/humangas/cheat.svg?style=svg)](https://circleci.com/gh/humangas/cheat)  
 My Cheat Sheet
 
 
