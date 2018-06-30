@@ -151,7 +151,7 @@ refs/tags/{{tagname}}
 ```
 
 ## [git] ローカルの変更を一時退避して、先にpullを取り込んでから追加したい
-こんなシチュエーションの時に...
+こんなシチュエーションの時に...  
 
 1. ローカルであるファイルを編集した
 1. pushしようかと思ったけど、先に最新版を取り込もうと思い返す 
@@ -162,11 +162,13 @@ refs/tags/{{tagname}}
 $ git stash
 $ git pull
 ```
+
 6. apply したいstash番号を確認してからapplyする
 ```
 git stash list 
 git apply stash@{N}
 ```
+
 7. 中身確認して問題なければcommitし、不要になったstashは削除する
 ```
 git commit -m 'hogehoge'
