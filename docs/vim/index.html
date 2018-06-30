@@ -239,8 +239,8 @@
 
 
   <li class="md-nav__item">
-    <a href=".." title="Welcome to MkDocs" class="md-nav__link">
-      Welcome to MkDocs
+    <a href=".." title="humangas's cheat sheet" class="md-nav__link">
+      humangas's cheat sheet
     </a>
   </li>
 
@@ -480,6 +480,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#vim_5" title="[vim] 画面を横に分割する" class="md-nav__link">
+    [vim] 画面を横に分割する
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim_6" title="[vim] 画面を縦に分割する" class="md-nav__link">
+    [vim] 画面を縦に分割する
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim_7" title="[vim] 分割したウィンドウを最大化する" class="md-nav__link">
+    [vim] 分割したウィンドウを最大化する
+  </a>
+  
+</li>
+      
       
       
       
@@ -668,6 +689,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#vim_5" title="[vim] 画面を横に分割する" class="md-nav__link">
+    [vim] 画面を横に分割する
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim_6" title="[vim] 画面を縦に分割する" class="md-nav__link">
+    [vim] 画面を縦に分割する
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim_7" title="[vim] 分割したウィンドウを最大化する" class="md-nav__link">
+    [vim] 分割したウィンドウを最大化する
+  </a>
+  
+</li>
+      
       
       
       
@@ -689,47 +731,61 @@
                 
                   <h1>Vim</h1>
                 
-                <h2 id="vim">[vim] タブを開く・移動する</h2>
+                <h2 id="vim">[vim] タブを開く・移動する<a class="headerlink" href="#vim" title="Permanent link">&para;</a></h2>
 <ul>
 <li>:tabe 新規タブつくる</li>
 <li>gt(前のタブ）、gT（後ろのタブ）に移動</li>
 </ul>
-<h2 id="vim_1">[vim] パスリンクをダイレクトに開く</h2>
+<h2 id="vim_1">[vim] パスリンクをダイレクトに開く<a class="headerlink" href="#vim_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>gx: ブラウザで開く</li>
 <li>gf: vim上でそのファイルパスのファイルをそのまま開く（URLであれば、HTMLソースがそのまま見える）</li>
 </ul>
-<h2 id="vim_2">[vim] リロード</h2>
+<h2 id="vim_2">[vim] リロード<a class="headerlink" href="#vim_2" title="Permanent link">&para;</a></h2>
 <ul>
 <li>:e!</li>
 </ul>
-<h2 id="vim_3">[vim] ,を改行に置換する</h2>
+<h2 id="vim_3">[vim] ,を改行に置換する<a class="headerlink" href="#vim_3" title="Permanent link">&para;</a></h2>
 <p>1行のcsvを縦に列挙したいときなどに<br />
 Point: ^M は、\&lt;C-v>\&lt;CR> で出る</p>
 <pre><code>:%s/,/^M/gc
 </code></pre>
 
-<h2 id="vim-vimdiff">[vim] vimでdiffする</h2>
+<h2 id="vim-vimdiff">[vim] vimでdiffする<a class="headerlink" href="#vim-vimdiff" title="Permanent link">&para;</a></h2>
 <p>vim にdiffが出る</p>
 <pre><code>$ vifdiff file1 file2
 </code></pre>
 
-<h2 id="vim-2diff">[vim] 現在のバッファを2画面でdiffする</h2>
+<h2 id="vim-2diff">[vim] 現在のバッファを2画面でdiffする<a class="headerlink" href="#vim-2diff" title="Permanent link">&para;</a></h2>
 <pre><code>:windo diffthis
 </code></pre>
 
-<h2 id="vim_4">[vim] 空白を除く</h2>
+<h2 id="vim_4">[vim] 空白を除く<a class="headerlink" href="#vim_4" title="Permanent link">&para;</a></h2>
 <pre><code>:v/\S/d
 </code></pre>
 
-<h2 id="vim-buffer">[vim] 開いている（buffer）ファイル一覧</h2>
+<h2 id="vim-buffer">[vim] 開いている（buffer）ファイル一覧<a class="headerlink" href="#vim-buffer" title="Permanent link">&para;</a></h2>
 <ul>
 <li>ls</li>
 </ul>
-<h2 id="vim-buffer_1">[vim] 開いている（buffer）ファイルに移動</h2>
+<h2 id="vim-buffer_1">[vim] 開いている（buffer）ファイルに移動<a class="headerlink" href="#vim-buffer_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>bN, b#, b% とかbでbufferを指定する(lsで見ればキーが分かる）</li>
 </ul>
+<h2 id="vim_5">[vim] 画面を横に分割する<a class="headerlink" href="#vim_5" title="Permanent link">&para;</a></h2>
+<ul>
+<li>:vs</li>
+</ul>
+<h2 id="vim_6">[vim] 画面を縦に分割する<a class="headerlink" href="#vim_6" title="Permanent link">&para;</a></h2>
+<ul>
+<li>:sp</li>
+</ul>
+<h2 id="vim_7">[vim] 分割したウィンドウを最大化する<a class="headerlink" href="#vim_7" title="Permanent link">&para;</a></h2>
+<ul>
+<li>\&lt;C-w>, |</li>
+</ul>
+<p>元に戻す場合:
+- \&lt;C-w>, =</p>
                 
                   
                 

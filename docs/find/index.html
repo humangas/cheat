@@ -239,8 +239,8 @@
 
 
   <li class="md-nav__item">
-    <a href=".." title="Welcome to MkDocs" class="md-nav__link">
-      Welcome to MkDocs
+    <a href=".." title="humangas's cheat sheet" class="md-nav__link">
+      humangas's cheat sheet
     </a>
   </li>
 
@@ -619,7 +619,7 @@
                 
                   <h1>Find</h1>
                 
-                <h2 id="find">[find] ある日時より後に更新されたファイルを探したい</h2>
+                <h2 id="find">[find] ある日時より後に更新されたファイルを探したい<a class="headerlink" href="#find" title="Permanent link">&para;</a></h2>
 <p>'2017/09/01 11:53' より後に更新されたファイルを探す</p>
 <pre><code>$ sudo find /home/test_taro/* -type f -newermt '20170901 11:53' | xargs ls -lh
 -rwx------ 1 test_taro test  436M  9月  1 11:58 2017 /home/test_taro/S23.csv
@@ -634,19 +634,19 @@
 - newerat/atime: アクセスされたファイル
 - newerct/ctime: 属性変更されたファイル
 - newermt/mtime: 更新されたファイル</p>
-<h2 id="find_1">[find] ある日時以前に更新されたファイルを探したい</h2>
+<h2 id="find_1">[find] ある日時以前に更新されたファイルを探したい<a class="headerlink" href="#find_1" title="Permanent link">&para;</a></h2>
 <p>'2015/01/01 00:00' 以前に更新されたファイルを探す </p>
 <pre><code>$ sudo find ./* -type f ! -newermt '20150101 00:00' | xargs ls -lh
 
 </code></pre>
 
-<h2 id="find_2">[find] ある期間の間に更新されたファイルを探したい</h2>
+<h2 id="find_2">[find] ある期間の間に更新されたファイルを探したい<a class="headerlink" href="#find_2" title="Permanent link">&para;</a></h2>
 <p>2017/05/09 14:00 - 2017/05/09 17:00 の間に更新されたファイルを探す</p>
 <pre><code># '2017/05/09 14:00' &lt; ファイルの更新日時 &lt;= '2017/05/09 17:00'
 $ sudo find ./* -type f -newermt '20170509 14:00' ! -newermt '20170509 17:00' | xargs ls -lh
 </code></pre>
 
-<h2 id="find-findmv">[find] findした結果を一気にmv</h2>
+<h2 id="find-findmv">[find] findした結果を一気にmv<a class="headerlink" href="#find-findmv" title="Permanent link">&para;</a></h2>
 <pre><code>find ./ -name '*.png' | xargs -I% mv % ./
 </code></pre>
 

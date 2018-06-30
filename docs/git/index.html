@@ -239,8 +239,8 @@
 
 
   <li class="md-nav__item">
-    <a href=".." title="Welcome to MkDocs" class="md-nav__link">
-      Welcome to MkDocs
+    <a href=".." title="humangas's cheat sheet" class="md-nav__link">
+      humangas's cheat sheet
     </a>
   </li>
 
@@ -759,7 +759,7 @@
                 
                   <h1>Git</h1>
                 
-                <h2 id="git-git">[git] gitで最初にやる基本設定</h2>
+                <h2 id="git-git">[git] gitで最初にやる基本設定<a class="headerlink" href="#git-git" title="Permanent link">&para;</a></h2>
 <p>ユーザ名・メールアドレス（pushするときに必須）</p>
 <pre><code>$ git config --global user.name XXX
 $ git config --global user.email XXX@XXX.com
@@ -773,16 +773,16 @@ $ git config --global user.email XXX@XXX.com
 <pre><code>$ git config --global http.sslverify false 
 </code></pre>
 
-<h2 id="git-adddiffcommit">[git] addしたファイルのdiffを確認する(commit前）</h2>
+<h2 id="git-adddiffcommit">[git] addしたファイルのdiffを確認する(commit前）<a class="headerlink" href="#git-adddiffcommit" title="Permanent link">&para;</a></h2>
 <pre><code>$ git diff --cached
 $ git diff --cached &lt;ファイルパス&gt;
 </code></pre>
 
-<h2 id="git-head">[git] HEADにマージしたブランチを削除したい</h2>
+<h2 id="git-head">[git] HEADにマージしたブランチを削除したい<a class="headerlink" href="#git-head" title="Permanent link">&para;</a></h2>
 <pre><code>$ git branch --delete foo
 </code></pre>
 
-<h2 id="git-master">[git] masterの内容を引き継がずにブランチを作成したい(ドキュメント管理専用ブランチ作成の場合など)</h2>
+<h2 id="git-master">[git] masterの内容を引き継がずにブランチを作成したい(ドキュメント管理専用ブランチ作成の場合など)<a class="headerlink" href="#git-master" title="Permanent link">&para;</a></h2>
 <p>通常のブランチ作成 （例えば git checkout -b gh-pages） では、作業ディレクトリの内容が全て引き継がれてしまう。
 ドキュメント管理専用ブランチを作成したいという要件の場合、masterの内容は不要。そういう時は以下の手順でできる。</p>
 <p>e.g. staging環境のドキュメント公開用ブランチ(staging)を作成する</p>
@@ -797,7 +797,7 @@ $ (staging) git commit -m 'first commit'
 $ (staging) git push origin staging
 </code></pre>
 
-<h2 id="git-push">[git] まだリモートにpushしてないローカルコミットを確認する</h2>
+<h2 id="git-push">[git] まだリモートにpushしてないローカルコミットを確認する<a class="headerlink" href="#git-push" title="Permanent link">&para;</a></h2>
 <pre><code>$ git log origin/master..master
 </code></pre>
 
@@ -817,25 +817,25 @@ $ (staging) git push origin staging
 <pre><code>$ git log --left-right master...origin/master
 </code></pre>
 
-<h2 id="git-diff">[git] コミットしたファイルのdiffを見たい</h2>
+<h2 id="git-diff">[git] コミットしたファイルのdiffを見たい<a class="headerlink" href="#git-diff" title="Permanent link">&para;</a></h2>
 <pre><code>$ git log
 # 目的のcommit idをコピー
 $ git show &lt;commit id&gt;
 </code></pre>
 
-<h2 id="git">[git] ブランチを強制削除したい</h2>
+<h2 id="git">[git] ブランチを強制削除したい<a class="headerlink" href="#git" title="Permanent link">&para;</a></h2>
 <p>マージしたかどうかを問わずに削除する</p>
 <pre><code>$ git branch -D foo
 </code></pre>
 
-<h2 id="git_1">[git] リモートブランチを削除したい</h2>
+<h2 id="git_1">[git] リモートブランチを削除したい<a class="headerlink" href="#git_1" title="Permanent link">&para;</a></h2>
 <p>コロンを前につける（ローカルは残るので、git branch -D foo で削除）</p>
 <pre><code>$ git push origin :new-feature
 To https://source.developers.google.com/p/projectid/r/default
  - [deleted]         new-feature
 </code></pre>
 
-<h2 id="git_2">[git] すべての（ローカル・リモート） ブランチを表示する</h2>
+<h2 id="git_2">[git] すべての（ローカル・リモート） ブランチを表示する<a class="headerlink" href="#git_2" title="Permanent link">&para;</a></h2>
 <pre><code>$ git branch --all
 master
 foo
@@ -846,12 +846,12 @@ origin/bar
 </code></pre>
 
 <p>リモートだけ参照する場合は、<code>--remote</code></p>
-<h2 id="git_3">[git] 特定のコミットだけ戻したい</h2>
+<h2 id="git_3">[git] 特定のコミットだけ戻したい<a class="headerlink" href="#git_3" title="Permanent link">&para;</a></h2>
 <pre><code>$ git log &lt;ファイルパス&gt;
 $ git checkout ad97721dbcf4e3d7f68305c714d673aaafc32637 &lt;ファイルパス&gt;
 </code></pre>
 
-<h2 id="git-reflogreset">[git] コミットをやり直したい（あの時に戻りたい）: reflogで確認してからそこにresetする</h2>
+<h2 id="git-reflogreset">[git] コミットをやり直したい（あの時に戻りたい）: reflogで確認してからそこにresetする<a class="headerlink" href="#git-reflogreset" title="Permanent link">&para;</a></h2>
 <pre><code>$ git reflog
 3e9e73e HEAD@{1}: reset: moving to HEAD@{6}
 8f19cec (HEAD -&gt; master, origin/master, origin/canary, canary) HEAD@{2}: merge canary: Fast-forward
@@ -860,15 +860,15 @@ $ git checkout ad97721dbcf4e3d7f68305c714d673aaafc32637 &lt;ファイルパス&g
 $ git reset --hard HEAD@{2}
 </code></pre>
 
-<p>reflog: 参照ログ、過去のあらゆるコミット履歴をみることができ、上記のãうに指定すればそこまで戻ることができる<br />
+<p>reflog: 参照ログ、過去のあらゆるコミット履歴をみることができ、上記のように指定すればそこまで戻ることができる<br />
 ユースケース: ある時点からのコミットを全部やり直したいとき</p>
-<h2 id="git-revert">[git] 特定のコミットだけをやり直したい（取り消し線のイメージ）: revert</h2>
+<h2 id="git-revert">[git] 特定のコミットだけをやり直したい（取り消し線のイメージ）: revert<a class="headerlink" href="#git-revert" title="Permanent link">&para;</a></h2>
 <pre><code>$ git revert &lt;commit id&gt;
 </code></pre>
 
 <p>ユースケース: バグの原因があるコミットに起因しており、それだけ除きたいとき<br />
 元に戻すが、元に戻したことを新たなコミットにする（すでに公開されたコミットログをしれっとなくすではなく、理由があって元に戻したと分かるようにする）</p>
-<h2 id="git_4">[git] 特定のバージョン（タグ）に切り替えたい</h2>
+<h2 id="git_4">[git] 特定のバージョン（タグ）に切り替えたい<a class="headerlink" href="#git_4" title="Permanent link">&para;</a></h2>
 <p>branchを作らずに、タグの参照のみのチェックアウトすることができる</p>
 <pre><code>$ git pull origin master
 $ git pull --tags
@@ -878,32 +878,23 @@ $ git branch
 refs/tags/{{tagname}}
 </code></pre>
 
-<h2 id="git-pull">[git] ローカルの変更を一時退避して、先にpullを取り込んでから追加したい</h2>
+<h2 id="git-pull">[git] ローカルの変更を一時退避して、先にpullを取り込んでから追加したい<a class="headerlink" href="#git-pull" title="Permanent link">&para;</a></h2>
 <p>こんなシチュエーションの時に...  </p>
 <ol>
 <li>ローカルであるファイルを編集した</li>
 <li>pushしようかと思ったけど、先に最新版を取り込もうと思い返す </li>
 <li>git pull したら、そのファイルに変更が入っていた</li>
 <li>ローカルの変更を一時退避してpull後に追加したい</li>
-<li>git stash して退避してから、pullして最新化</li>
+<li>git stash して退避してから、pullして最新化
+    <code>$ git stash
+    $ git pull</code></li>
+<li>apply したいstash番号を確認してからapplyする
+    <code>git stash list 
+    git apply stash@{N}</code></li>
+<li>中身確認して問題なければcommitし、不要になったstashは削除する
+    <code>git commit -m 'hogehoge'
+    git stash drop N</code></li>
 </ol>
-<pre><code>$ git stash
-$ git pull
-</code></pre>
-
-<ol>
-<li>apply したいstash番号を確認してからapplyする</li>
-</ol>
-<pre><code>git stash list 
-git apply stash@{N}
-</code></pre>
-
-<ol>
-<li>中身確認して問題なければcommitし、不要になったstashは削除する</li>
-</ol>
-<pre><code>git commit -m 'hogehoge'
-git stash drop N
-</code></pre>
                 
                   
                 

@@ -239,8 +239,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="Welcome to MkDocs" class="md-nav__link">
-      Welcome to MkDocs
+    <a href="../.." title="humangas's cheat sheet" class="md-nav__link">
+      humangas's cheat sheet
     </a>
   </li>
 
@@ -579,7 +579,7 @@
                 
                   <h1>Iam</h1>
                 
-                <h2 id="aws-iam">[aws] IAMユーザー一覧取得する</h2>
+                <h2 id="aws-iam">[aws] IAMユーザー一覧取得する<a class="headerlink" href="#aws-iam" title="Permanent link">&para;</a></h2>
 <p>個人ユーザにu_から始まるという命名規則をつけた場合</p>
 <pre><code>$ aws iam list-users | jq -r '.Users[].UserName' | grep -e '^u_.*'
 u_xxx_yyy
