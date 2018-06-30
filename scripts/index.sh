@@ -27,9 +27,6 @@ index() {
     for l in $(find $DOCS_PATH -name "*.md" -type f -print0  \
                     | xargs -0 egrep '## \[.*' \
                     | sort); do
-        # file=$(echo "$l" | cut -d: -f1)
-        # file=$(echo ${file/$DOCS_PATH\//})
-        # file=$(echo ${file%.*})
         _tmp=$(echo "$l" | cut -d: -f1 | sed -e "s@$DOCS_PATH/@@")
         file=$(echo ${_tmp%.*})
         
@@ -37,8 +34,6 @@ index() {
             | cut -d: -f2  \
             | sed -e "s/## //"  \
             -e "s/\[.*\] //")
-            # -e "s/\[/【/g"  \
-            # -e "s/\]/】/g")
 
         if [[ $file != $header ]]; then
             echo -e "\n### $file"
