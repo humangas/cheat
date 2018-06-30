@@ -39,3 +39,9 @@ $ vifdiff file1 file2
 ```
 
 
+## [vim] 開いている（buffer）ファイル一覧
+- ls
+
+
+## [vim] 開いている（buffer）ファイルに移動
+- bN, b#, b% とかbでbufferを指定する(lsで見ればキーが分かる）
