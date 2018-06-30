@@ -3,8 +3,8 @@
 # Create index.md under _docs folder
 # 
 # Usage: You can use it in either of the following ways
-# $ make index
-# $ bash scripts/index.sh
+# $ make indexmd
+# $ bash scripts/indexmd.sh
 ###########################################################################
 DOCS_PATH="_docs"
 BASE_URL="https://humangas.github.io/cheat"
