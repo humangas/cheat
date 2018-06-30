@@ -432,14 +432,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#vim-vim" title="[vim] vimでリロード" class="md-nav__link">
-    [vim] vimでリロード
+  <a href="#vim_2" title="[vim] リロード" class="md-nav__link">
+    [vim] リロード
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#vim_2" title="[vim] ,を改行に置換する" class="md-nav__link">
+  <a href="#vim_3" title="[vim] ,を改行に置換する" class="md-nav__link">
     [vim] ,を改行に置換する
   </a>
   
@@ -460,7 +460,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#vim_3" title="[vim] 空白を除く" class="md-nav__link">
+  <a href="#vim_4" title="[vim] 空白を除く" class="md-nav__link">
     [vim] 空白を除く
   </a>
   
@@ -570,14 +570,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#vim-vim" title="[vim] vimでリロード" class="md-nav__link">
-    [vim] vimでリロード
+  <a href="#vim_2" title="[vim] リロード" class="md-nav__link">
+    [vim] リロード
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#vim_2" title="[vim] ,を改行に置換する" class="md-nav__link">
+  <a href="#vim_3" title="[vim] ,を改行に置換する" class="md-nav__link">
     [vim] ,を改行に置換する
   </a>
   
@@ -598,7 +598,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#vim_3" title="[vim] 空白を除く" class="md-nav__link">
+  <a href="#vim_4" title="[vim] 空白を除く" class="md-nav__link">
     [vim] 空白を除く
   </a>
   
@@ -635,13 +635,13 @@
 <li>gx: ブラウザで開く</li>
 <li>gf: vim上でそのファイルパスのファイルをそのまま開く（URLであれば、HTMLソースがそのまま見える）</li>
 </ul>
-<h2 id="vim-vim">[vim] vimでリロード</h2>
+<h2 id="vim_2">[vim] リロード</h2>
 <ul>
 <li>:e!</li>
 </ul>
-<h2 id="vim_2">[vim] ,を改行に置換する</h2>
+<h2 id="vim_3">[vim] ,を改行に置換する</h2>
 <p>1行のcsvを縦に列挙したいときなどに<br />
-Point: ^M はã<C-v><CR></p>
+Point: ^M は、\&lt;C-v>\&lt;CR> で出る</p>
 <pre><code>:%s/,/^M/gc
 </code></pre>
 
@@ -654,7 +654,7 @@ Point: ^M はã<C-v><CR></p>
 <pre><code>:windo diffthis
 </code></pre>
 
-<h2 id="vim_3">[vim] 空白を除く</h2>
+<h2 id="vim_4">[vim] 空白を除く</h2>
 <pre><code>:v/\S/d
 </code></pre>
                 

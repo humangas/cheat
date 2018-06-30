@@ -247,7 +247,7 @@
         },
         {
             "location": "/vim/",
-            "text": "[vim] \u30bf\u30d6\u3092\u958b\u304f\u30fb\u79fb\u52d5\u3059\u308b\n\n\n\n\n:tabe \u65b0\u898f\u30bf\u30d6\u3064\u304f\u308b\n\n\ngt(\u524d\u306e\u30bf\u30d6\uff09\u3001gT\uff08\u5f8c\u308d\u306e\u30bf\u30d6\uff09\u306b\u79fb\u52d5\n\n\n\n\n[vim] \u30d1\u30b9\u30ea\u30f3\u30af\u3092\u30c0\u30a4\u30ec\u30af\u30c8\u306b\u958b\u304f\n\n\n\n\ngx: \u30d6\u30e9\u30a6\u30b6\u3067\u958b\u304f\n\n\ngf: vim\u4e0a\u3067\u305d\u306e\u30d5\u30a1\u30a4\u30eb\u30d1\u30b9\u306e\u30d5\u30a1\u30a4\u30eb\u3092\u305d\u306e\u307e\u307e\u958b\u304f\uff08URL\u3067\u3042\u308c\u3070\u3001HTML\u30bd\u30fc\u30b9\u304c\u305d\u306e\u307e\u307e\u898b\u3048\u308b\uff09\n\n\n\n\n[vim] vim\u3067\u30ea\u30ed\u30fc\u30c9\n\n\n\n\n:e!\n\n\n\n\n[vim] ,\u3092\u6539\u884c\u306b\u7f6e\u63db\u3059\u308b\n\n\n1\u884c\u306ecsv\u3092\u7e26\u306b\u5217\u6319\u3057\u305f\u3044\u3068\u304d\u306a\u3069\u306b\n\nPoint: ^M \u306f\u00e3\u0080\u0081\n\n\n:%s/,/^M/gc\n\n\n\n\n[vim] vim\u3067diff\u3059\u308b\n\n\nvim \u306bdiff\u304c\u51fa\u308b\n\n\n$ vifdiff file1 file2\n\n\n\n\n[vim] \u73fe\u5728\u306e\u30d0\u30c3\u30d5\u30a1\u30922\u753b\u9762\u3067diff\u3059\u308b\n\n\n:windo diffthis\n\n\n\n\n[vim] \u7a7a\u767d\u3092\u9664\u304f\n\n\n:v/\\S/d",
+            "text": "[vim] \u30bf\u30d6\u3092\u958b\u304f\u30fb\u79fb\u52d5\u3059\u308b\n\n\n\n\n:tabe \u65b0\u898f\u30bf\u30d6\u3064\u304f\u308b\n\n\ngt(\u524d\u306e\u30bf\u30d6\uff09\u3001gT\uff08\u5f8c\u308d\u306e\u30bf\u30d6\uff09\u306b\u79fb\u52d5\n\n\n\n\n[vim] \u30d1\u30b9\u30ea\u30f3\u30af\u3092\u30c0\u30a4\u30ec\u30af\u30c8\u306b\u958b\u304f\n\n\n\n\ngx: \u30d6\u30e9\u30a6\u30b6\u3067\u958b\u304f\n\n\ngf: vim\u4e0a\u3067\u305d\u306e\u30d5\u30a1\u30a4\u30eb\u30d1\u30b9\u306e\u30d5\u30a1\u30a4\u30eb\u3092\u305d\u306e\u307e\u307e\u958b\u304f\uff08URL\u3067\u3042\u308c\u3070\u3001HTML\u30bd\u30fc\u30b9\u304c\u305d\u306e\u307e\u307e\u898b\u3048\u308b\uff09\n\n\n\n\n[vim] \u30ea\u30ed\u30fc\u30c9\n\n\n\n\n:e!\n\n\n\n\n[vim] ,\u3092\u6539\u884c\u306b\u7f6e\u63db\u3059\u308b\n\n\n1\u884c\u306ecsv\u3092\u7e26\u306b\u5217\u6319\u3057\u305f\u3044\u3068\u304d\u306a\u3069\u306b\n\nPoint: ^M \u306f\u3001\\<C-v>\\<CR> \u3067\u51fa\u308b\n\n\n:%s/,/^M/gc\n\n\n\n\n[vim] vim\u3067diff\u3059\u308b\n\n\nvim \u306bdiff\u304c\u51fa\u308b\n\n\n$ vifdiff file1 file2\n\n\n\n\n[vim] \u73fe\u5728\u306e\u30d0\u30c3\u30d5\u30a1\u30922\u753b\u9762\u3067diff\u3059\u308b\n\n\n:windo diffthis\n\n\n\n\n[vim] \u7a7a\u767d\u3092\u9664\u304f\n\n\n:v/\\S/d",
             "title": "Vim"
         },
         {
@@ -261,13 +261,13 @@
             "title": "[vim] \u30d1\u30b9\u30ea\u30f3\u30af\u3092\u30c0\u30a4\u30ec\u30af\u30c8\u306b\u958b\u304f"
         },
         {
-            "location": "/vim/#vim-vim",
+            "location": "/vim/#vim_2",
             "text": ":e!",
-            "title": "[vim] vim\u3067\u30ea\u30ed\u30fc\u30c9"
+            "title": "[vim] \u30ea\u30ed\u30fc\u30c9"
         },
         {
-            "location": "/vim/#vim_2",
-            "text": "1\u884c\u306ecsv\u3092\u7e26\u306b\u5217\u6319\u3057\u305f\u3044\u3068\u304d\u306a\u3069\u306b \nPoint: ^M \u306f\u00e3\u0080\u0081  :%s/,/^M/gc",
+            "location": "/vim/#vim_3",
+            "text": "1\u884c\u306ecsv\u3092\u7e26\u306b\u5217\u6319\u3057\u305f\u3044\u3068\u304d\u306a\u3069\u306b \nPoint: ^M \u306f\u3001\\<C-v>\\<CR> \u3067\u51fa\u308b  :%s/,/^M/gc",
             "title": "[vim] ,\u3092\u6539\u884c\u306b\u7f6e\u63db\u3059\u308b"
         },
         {
@@ -281,7 +281,7 @@
             "title": "[vim] \u73fe\u5728\u306e\u30d0\u30c3\u30d5\u30a1\u30922\u753b\u9762\u3067diff\u3059\u308b"
         },
         {
-            "location": "/vim/#vim_3",
+            "location": "/vim/#vim_4",
             "text": ":v/\\S/d",
             "title": "[vim] \u7a7a\u767d\u3092\u9664\u304f"
         },
