@@ -36,6 +36,10 @@ jobs:
             - "15:81:38:d4:e4:aa:29:e1:73:37:fc:db:56:56:39:ed"
 
       - run:
+          name: make index
+          command: make index
+
+      - run:
           name: mkdocs build
           command: venv/bin/mkdocs build
 
