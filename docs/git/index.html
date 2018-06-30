@@ -326,8 +326,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#git-pusha" title="[git] まだリモートにpushしてないローカã«コミットを確認する" class="md-nav__link">
-    [git] まだリモートにpushしてないローカã«コミットを確認する
+  <a href="#git-push" title="[git] まだリモートにpushしてないローカルコミットを確認する" class="md-nav__link">
+    [git] まだリモートにpushしてないローカルコミットを確認する
   </a>
   
 </li>
@@ -384,6 +384,13 @@
         <li class="md-nav__item">
   <a href="#git_4" title="[git] 特定のバージョン（タグ）に切り替えたい" class="md-nav__link">
     [git] 特定のバージョン（タグ）に切り替えたい
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-pull" title="[git] ローカルの変更を一時退避して、先にpullを取り込んでから追加したい" class="md-nav__link">
+    [git] ローカルの変更を一時退避して、先にpullを取り込んでから追加したい
   </a>
   
 </li>
@@ -579,6 +586,42 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-17" type="checkbox" id="nav-17">
+    
+    <label class="md-nav__link" for="nav-17">
+      Vim plugin
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-17">
+        Vim plugin
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vim-plugin/vimfiler/" title="Vimfiler" class="md-nav__link">
+      Vimfiler
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -626,8 +669,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#git-pusha" title="[git] まだリモートにpushしてないローカã«コミットを確認する" class="md-nav__link">
-    [git] まだリモートにpushしてないローカã«コミットを確認する
+  <a href="#git-push" title="[git] まだリモートにpushしてないローカルコミットを確認する" class="md-nav__link">
+    [git] まだリモートにpushしてないローカルコミットを確認する
   </a>
   
 </li>
@@ -684,6 +727,13 @@
         <li class="md-nav__item">
   <a href="#git_4" title="[git] 特定のバージョン（タグ）に切り替えたい" class="md-nav__link">
     [git] 特定のバージョン（タグ）に切り替えたい
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-pull" title="[git] ローカルの変更を一時退避して、先にpullを取り込んでから追加したい" class="md-nav__link">
+    [git] ローカルの変更を一時退避して、先にpullを取り込んでから追加したい
   </a>
   
 </li>
@@ -747,7 +797,7 @@ $ (staging) git commit -m 'first commit'
 $ (staging) git push origin staging
 </code></pre>
 
-<h2 id="git-pusha">[git] まだリモートにpushしてないローカã«コミットを確認する</h2>
+<h2 id="git-push">[git] まだリモートにpushしてないローカルコミットを確認する</h2>
 <pre><code>$ git log origin/master..master
 </code></pre>
 
@@ -826,6 +876,31 @@ $ git tag
 $ git checkout refs/tags/1.3.1
 $ git branch
 refs/tags/{{tagname}}
+</code></pre>
+
+<h2 id="git-pull">[git] ローカルの変更を一時退避して、先にpullを取り込んでから追加したい</h2>
+<p>こんなシチュエーションの時に...
+1. ローカルであるファイルを編集した
+1. pushしようかと思ったけど、先に最新版を取り込もうと思い返す 
+1. git pull したら、そのファイルに変更が入っていた
+1. ローカルの変更を一時退避してpull後に追加したい
+1. git stash して退避してから、pullして最新化</p>
+<pre><code>$ git stash
+$ git pull
+</code></pre>
+
+<ol>
+<li>apply したいstash番号を確認してからapplyする</li>
+</ol>
+<pre><code>git stash list 
+git apply stash@{N}
+</code></pre>
+
+<ol>
+<li>中身確認して問題なければcommitし、不要になったstashは削除する</li>
+</ol>
+<pre><code>git commit -m 'hogehoge'
+git stash drop N
 </code></pre>
                 
                   
