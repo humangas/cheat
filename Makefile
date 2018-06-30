@@ -3,7 +3,7 @@
 ################################################################### 
 .DEFAULT_GOAL := help
 
-.PHONY: all help update serve index view
+.PHONY: all help update serve indexmd view
 
 all:
 
@@ -11,10 +11,10 @@ help:
 	@echo "Usage: make <target>"
 	@echo ""
 	@echo "target:"
-	@echo " - update:  Update repository"
-	@echo " - serve:   Serve _docs/*.md with mkdocs"
-	@echo " - index:   Generate index.md"
-	@echo " - view:    make serve after make index"
+	@echo " - update:    Update repository"
+	@echo " - serve:     Serve _docs/*.md with mkdocs"
+	@echo " - indexmd:   Generate index.md"
+	@echo " - view:      make serve after make indexmd"
 	@echo ""
 
 update:
@@ -24,7 +24,7 @@ serve:
 	@open -a "/Applications/Google Chrome.app" "http://localhost:8000"
 	@mkdocs serve
 
-index:
-	@bash scripts/index.sh
+indexmd:
+	@bash scripts/indexmd.sh
 
-view: index serve
+view: indexmd serve
