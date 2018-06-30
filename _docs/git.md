@@ -47,7 +47,7 @@ $ (staging) git push origin staging
 ```
 
 
-## [git] まだリモートにpushしてないローカã«コミットを確認する
+## [git] まだリモートにpushしてないローカルコミットを確認する
 ```
 $ git log origin/master..master
 ```
