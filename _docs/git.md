@@ -127,7 +127,7 @@ $ git reflog
 
 $ git reset --hard HEAD@{2}
 ```
-reflog: 参照ログ、過去のあらゆるコミット履歴をみることができ、上記のãうに指定すればそこまで戻ることができる  
+reflog: 参照ログ、過去のあらゆるコミット履歴をみることができ、上記のように指定すればそこまで戻ることができる  
 ユースケース: ある時点からのコミットを全部やり直したいとき
 
 
@@ -158,19 +158,17 @@ refs/tags/{{tagname}}
 1. git pull したら、そのファイルに変更が入っていた
 1. ローカルの変更を一時退避してpull後に追加したい
 1. git stash して退避してから、pullして最新化
-```
-$ git stash
-$ git pull
-```
-
+    ```
+    $ git stash
+    $ git pull
+    ```
 6. apply したいstash番号を確認してからapplyする
-```
-git stash list 
-git apply stash@{N}
-```
-
+    ```
+    git stash list 
+    git apply stash@{N}
+    ```
 7. 中身確認して問題なければcommitし、不要になったstashは削除する
-```
-git commit -m 'hogehoge'
-git stash drop N
-```
+    ```
+    git commit -m 'hogehoge'
+    git stash drop N
+    ```
