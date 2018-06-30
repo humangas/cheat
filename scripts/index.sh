@@ -12,8 +12,7 @@ BASE_URL="https://humangas.github.io/cheat"
 
 header() {
 cat << EOS
-# humangas's cheat sheet 
-See also: [github.com/humangas/cheat](https://github.com/humangas/cheat)
+# INDEX
 EOS
 }
 
