@@ -71,7 +71,7 @@ Settings > Options > GitHub Pages > Source:
 
 ## Testing Views
 ```
-$ mkdocs serve
+$ make view
 ```
 
 

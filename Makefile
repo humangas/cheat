@@ -3,7 +3,7 @@
 ################################################################### 
 .DEFAULT_GOAL := help
 
-.PHONY: all help update serve index
+.PHONY: all help update serve index view
 
 all:
 
@@ -14,6 +14,7 @@ help:
 	@echo " - update:  Update repository"
 	@echo " - serve:   Serve _docs/*.md with mkdocs"
 	@echo " - index:   Generate index.md"
+	@echo " - view:    make serve after make index"
 	@echo ""
 
 update:
@@ -25,3 +26,5 @@ serve:
 
 index:
 	@bash scripts/index.sh
+
+view: index serve
