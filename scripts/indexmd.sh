@@ -23,23 +23,6 @@ contents() {
 
 index() {
     # setting required: https://squidfunk.github.io/mkdocs-material/extensions/permalinks/#installation
-
-    #$ grep '.*title="\[vim\] リロード.*' vim/index.html
-    #  <a href="#vim_2" title="[vim] リロード" class="md-nav__link">
-    #  <a href="#vim_2" title="[vim] リロード" class="md-nav__link">
-    #
-    #$ grep '.*title="\[vim\] リロード.*' vim/index.html | head -1
-    #  <a href="#vim_2" title="[vim] リロード" class="md-nav__link">
-    #
-    #$ grep '.*title="\[vim\] リロード.*' vim/index.html | head -1 | grep -Po '(?<=")[^",]+(?=")'
-    ##vim_2
-    # title=
-    #[vim] リロード
-    # class=
-    #md-nav__link
-    #
-    #$ grep '.*title="\[vim\] リロード.*' vim/index.html | head -1 | grep -Po '(?<=")[^",]+(?=")' | head -1
-    ##vim_2
     _permalink() {
         _tmp=$(echo "$file_path" | sed -e "s/$DOCS_PATH/$SITE_PATH/")
         indexhtml_path="${_tmp%.*}/index.html"
@@ -47,8 +30,6 @@ index() {
         echo "- [$title]($BASE_URL/$file/$index)"
     }
 
-    # Contents of variable $l
-    # e.g. _docs/shell.md:1:## [shell] あるディレクトリ配下のファイル数をカウントする
     IFS=$'\n'
     for l in $(find $DOCS_PATH -name "*.md" -type f -print0  \
                     | xargs -0 egrep '## \[.*' \
@@ -67,7 +48,6 @@ index() {
         fi
         header=$file
 
-        # echo "- [$title]($BASE_URL/$file)"
         _permalink
     done
 }
