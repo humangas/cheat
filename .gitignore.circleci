@@ -1,8 +1,6 @@
 site/
 .python-version
 venv/
-docs/
-_docs/index.md
 
 
 

@@ -48,6 +48,12 @@ jobs:
           command: venv/bin/mkdocs build
 
       - run:
+          name: change to .gitignore for CircleCi
+          command: |
+            rm .gitignore
+            mv .gitignore.circleci .gitignore
+
+      - run:
           name: update docs
           command: |
             git config --global user.name "humangas"
