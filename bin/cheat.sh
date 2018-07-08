@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 
 APPNAME="cheat"
+VERSION="0.0.1"
 CHEAT_BASE_PATH=${CHEAT_BASE_PATH:-$GOPATH/src/github.com/humangas/cheat/_docs}
 CHEAT_WEB_SITE=${CHEAT_WEB_SITE:-https://humangas.github.io/cheat/}
 
 usage() {
-echo "Usage: $APPNAME [--help] [option] [args]
+echo "Usage: $APPNAME [--help|--version] [option] [args]
+Version: $VERSION
+
 Option:
     -f [filter]  select cheat file
     -b           open $CHEAT_WEB_SITE
@@ -18,6 +21,11 @@ Dependencies:
     - fzf: https://github.com/junegunn/fzf
 "
 exit 0
+}
+
+version() {
+    echo "$APPNAME $VERSION"
+    exit 0
 }
 
 item() {
@@ -76,6 +84,7 @@ browse() {
 
 main() {
     [[ "$1" == "--help" ]] && usage
+    [[ "$1" == "--version" ]] && version
 
     local option="$1"
     case $option in
