@@ -515,6 +515,55 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#vim_9" title="[vim] 表示画面内で上、中、下に移動" class="md-nav__link">
+    [vim] 表示画面内で上、中、下に移動
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim_10" title="[vim] ジャンプリストに移動" class="md-nav__link">
+    [vim] ジャンプリストに移動
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim_11" title="[vim] 段落移動" class="md-nav__link">
+    [vim] 段落移動
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim_12" title="[vim] ファイルの割合（%）指定して移動" class="md-nav__link">
+    [vim] ファイルの割合（%）指定して移動
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim_13" title="[vim] ファイル最下部でインサートモード" class="md-nav__link">
+    [vim] ファイル最下部でインサートモード
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim_14" title="[vim] さっきいたところと今のところに行ったり来たり" class="md-nav__link">
+    [vim] さっきいたところと今のところに行ったり来たり
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim_15" title="[vim] 選択範囲を折りたたむ" class="md-nav__link">
+    [vim] 選択範囲を折りたたむ
+  </a>
+  
+</li>
+      
       
       
       
@@ -604,6 +653,18 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vim-plugin/surround/" title="Surround" class="md-nav__link">
+      Surround
+    </a>
+  </li>
+
         
           
           
@@ -738,6 +799,55 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#vim_9" title="[vim] 表示画面内で上、中、下に移動" class="md-nav__link">
+    [vim] 表示画面内で上、中、下に移動
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim_10" title="[vim] ジャンプリストに移動" class="md-nav__link">
+    [vim] ジャンプリストに移動
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim_11" title="[vim] 段落移動" class="md-nav__link">
+    [vim] 段落移動
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim_12" title="[vim] ファイルの割合（%）指定して移動" class="md-nav__link">
+    [vim] ファイルの割合（%）指定して移動
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim_13" title="[vim] ファイル最下部でインサートモード" class="md-nav__link">
+    [vim] ファイル最下部でインサートモード
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim_14" title="[vim] さっきいたところと今のところに行ったり来たり" class="md-nav__link">
+    [vim] さっきいたところと今のところに行ったり来たり
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim_15" title="[vim] 選択範囲を折りたたむ" class="md-nav__link">
+    [vim] 選択範囲を折りたたむ
+  </a>
+  
+</li>
+      
       
       
       
@@ -794,11 +904,11 @@ Point: ^M は、\&lt;C-v>\&lt;CR> で出る</p>
 
 <h2 id="vim-buffer">[vim] 開いている（buffer）ファイル一覧<a class="headerlink" href="#vim-buffer" title="Permanent link">&para;</a></h2>
 <ul>
-<li>ls</li>
+<li>:ls</li>
 </ul>
 <h2 id="vim-buffer_1">[vim] 開いている（buffer）ファイルに移動<a class="headerlink" href="#vim-buffer_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li>bN, b#, b% とかbでbufferを指定する(lsで見ればキーが分かる）</li>
+<li>:bN, b#, b% とかbでbufferを指定する(lsで見ればキーが分かる）</li>
 </ul>
 <h2 id="vim_5">[vim] 画面を横に分割する<a class="headerlink" href="#vim_5" title="Permanent link">&para;</a></h2>
 <ul>
@@ -826,6 +936,41 @@ Point: ^M は、\&lt;C-v>\&lt;CR> で出る</p>
 <ul>
 <li><code>[[</code> 前の関数に移動</li>
 <li><code>]]</code> 次の関数に移動</li>
+</ul>
+<h2 id="vim_9">[vim] 表示画面内で上、中、下に移動<a class="headerlink" href="#vim_9" title="Permanent link">&para;</a></h2>
+<ul>
+<li>H 画面最上部</li>
+<li>M 画面中央</li>
+<li>L 画面最下部</li>
+<li><code>zz</code>: 今いる行を中央にする</li>
+<li><code>z&lt;CR&gt;</code>: 今いる行を先頭にする</li>
+</ul>
+<h2 id="vim_10">[vim] ジャンプリストに移動<a class="headerlink" href="#vim_10" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>&lt;C-o&gt;</code> 戻る</li>
+<li><code>&lt;C-i&gt;</code> 進む </li>
+</ul>
+<h2 id="vim_11">[vim] 段落移動<a class="headerlink" href="#vim_11" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>{</code> 上</li>
+<li><code>}</code> 下</li>
+</ul>
+<h2 id="vim_12">[vim] ファイルの割合（%）指定して移動<a class="headerlink" href="#vim_12" title="Permanent link">&para;</a></h2>
+<ul>
+<li>N% e.g. 30% で30%のところに移動</li>
+</ul>
+<h2 id="vim_13">[vim] ファイル最下部でインサートモード<a class="headerlink" href="#vim_13" title="Permanent link">&para;</a></h2>
+<ul>
+<li>gi</li>
+</ul>
+<h2 id="vim_14">[vim] さっきいたところと今のところに行ったり来たり<a class="headerlink" href="#vim_14" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>''</code></li>
+</ul>
+<h2 id="vim_15">[vim] 選択範囲を折りたたむ<a class="headerlink" href="#vim_15" title="Permanent link">&para;</a></h2>
+<ul>
+<li>選択範囲を折りたたむ: ヴィジュアルモードで、zf</li>
+<li>折りたたみ解除: ヴィジュアルモードで、zd</li>
 </ul>
                 
                   

@@ -86,6 +86,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://humangas.github.io/cheat/vim-plugin/surround/</loc>
+     <lastmod>2018-07-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://humangas.github.io/cheat/vim-plugin/vimfiler/</loc>
      <lastmod>2018-07-15</lastmod>
      <changefreq>daily</changefreq>
