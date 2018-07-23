@@ -12,6 +12,7 @@ Version: $VERSION
 Option:
     -f [filter]  select cheat file
     -b           open $CHEAT_WEB_SITE
+    -c           cd $CHEAT_BASE_PATH
 
 Customize:
     export CHEAT_BASE_PATH=\"$CHEAT_BASE_PATH\"
@@ -82,6 +83,11 @@ browse() {
     open $CHEAT_WEB_SITE
 }
 
+changedir() {
+    cd "$CHEAT_BASE_PATH"
+    exec $SHELL
+}
+
 main() {
     [[ "$1" == "--help" ]] && usage
     [[ "$1" == "--version" ]] && version
@@ -90,6 +96,7 @@ main() {
     case $option in
         -f)    shift && file "$@" && return ;;
         -b)    shift && browse && return ;;
+        -c)    shift && changedir && return ;;
         *)     item "$@" && return ;;
     esac
 }
