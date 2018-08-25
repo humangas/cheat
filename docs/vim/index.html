@@ -894,6 +894,14 @@ Point: ^M は、\&lt;C-v>\&lt;CR> で出る</p>
 <pre><code>$ vifdiff file1 file2
 </code></pre>
 
+<p>vim で開いているファイルとの diff を表示する</p>
+<pre><code># 縦に開く
+:diffsplit &lt;file&gt;
+
+# 横に開く
+:vertical diffsplit &lt;file&gt;
+</code></pre>
+
 <h2 id="vim-2diff">[vim] 現在のバッファを2画面でdiffする<a class="headerlink" href="#vim-2diff" title="Permanent link">&para;</a></h2>
 <pre><code>:windo diffthis
 </code></pre>
