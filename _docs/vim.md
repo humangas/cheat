@@ -26,6 +26,15 @@ vim にdiffが出る
 $ vifdiff file1 file2
 ```
 
+vim で開いているファイルとの diff を表示する
+```
+# 縦に開く
+:diffsplit <file>
+
+# 横に開く
+:vertical diffsplit <file>
+```
+
 
 ## [vim] 現在のバッファを2画面でdiffする
 ```
