@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja" class="no-js">
   <head>
     
@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-　、。，．]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.6">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
     
     
       
@@ -46,12 +46,12 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.572ca0f0.css">
       
       
     
     
-      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../assets/javascripts/modernizr.8c900955.js"></script>
     
     
       
@@ -61,6 +61,7 @@
       
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
     
     
   </head>
@@ -410,6 +411,54 @@
     [tmux] tmuxでよく使う操作
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="よく使う操作のみ抜粋" class="md-nav__link">
+    よく使う操作のみ抜粋
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="基本" class="md-nav__link">
+    基本
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="セッション" class="md-nav__link">
+    セッション
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="ウィンドウ" class="md-nav__link">
+    ウィンドウ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="ペイン" class="md-nav__link">
+    ペイン
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="コピー" class="md-nav__link">
+    コピー
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -626,6 +675,54 @@
     [tmux] tmuxでよく使う操作
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="よく使う操作のみ抜粋" class="md-nav__link">
+    よく使う操作のみ抜粋
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="基本" class="md-nav__link">
+    基本
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="セッション" class="md-nav__link">
+    セッション
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="ウィンドウ" class="md-nav__link">
+    ウィンドウ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="ペイン" class="md-nav__link">
+    ペイン
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="コピー" class="md-nav__link">
+    コピー
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -651,14 +748,57 @@
                 
                 <h2 id="tmux-tmux">[tmux] tmuxでよく使う操作<a class="headerlink" href="#tmux-tmux" title="Permanent link">&para;</a></h2>
 <p>以下は全部プレフィックスキー（\&lt;C-b>）に加えて押下するキーということ。</p>
+<h3 id="_1">よく使う操作のみ抜粋<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <ul>
-<li>ウィンドウ一覧：w</li>
+<li>ウィンドウ作成: c</li>
 <li>ウィンドウジャンプ：0-9</li>
-<li>ウィンドウ移動：n（次）、p（前）、l（以前の）</li>
-<li>ペインの破棄：x</li>
-<li>ペイン分割：%（左右）、"（上下）</li>
-<li>ペイン移動：o（次）、;（以前の）</li>
+<li>ウィンドウ移動：n（次）、p（前）、l（直前）、'（入力番号）</li>
+<li>ウィンドウ一覧選択：w</li>
+<li>コピーモード：[（開始）→  \&lt;Space>（開始位置決定）→ \&lt;CR>（終了位置決定）→ ]（貼付け）</li>
+<li>ウィンドウ番号を入力番号に変更: .</li>
+<li>ペインの破棄: x</li>
+<li>ペイン分割: %（左右）、"（上下）</li>
+<li>ペイン移動: o（次）、;（直前）</li>
 <li>ペインの最大化/復帰：z</li>
+<li>ペイン入替え: {（前方向）、}（後方向）</li>
+</ul>
+<h3 id="_2">基本<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>キーバインド一覧: ?</li>
+<li>コマンドモード: <code>:</code><ul>
+<li><code>show-option -g</code>: セッションオプション一覧を表示</li>
+<li><code>show-window-option -g</code>: ウィンドウオプション一覧を表示</li>
+</ul>
+</li>
+</ul>
+<h3 id="_3">セッション<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>セッション一覧選択: s</li>
+<li>セッションからデタッチ: d</li>
+<li>セッション名変更: $</li>
+</ul>
+<h3 id="_4">ウィンドウ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>ウィンドウ作成: c</li>
+<li>ウィンドウジャンプ：0-9</li>
+<li>ウィンドウ移動：n（次）、p（前）、l（直前）、'（入力番号）</li>
+<li>ウィンドウ一覧選択：w</li>
+<li>ウィンドウ破棄: &amp;</li>
+<li>ウィンドウ名変更: ,</li>
+<li>ウィンドウ検索: f</li>
+<li>ウィンドウ番号を入力番号に変更: .</li>
+</ul>
+<h3 id="_5">ペイン<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>ペインの破棄: x</li>
+<li>ペイン分割: %（左右）、"（上下）</li>
+<li>ペイン移動: o（次）、;（直前）</li>
+<li>ペインの最大化/復帰：z</li>
+<li>ペイン入替え: {（前方向）、}（後方向）</li>
+<li>ペイン番号表示: q</li>
+</ul>
+<h3 id="_6">コピー<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
 <li>コピーモード：[（開始）→  \&lt;Space>（開始位置決定）→ \&lt;CR>（終了位置決定）→ ]（貼付け）</li>
 </ul>
                 
@@ -736,7 +876,7 @@
       
     </div>
     
-      <script src="../assets/javascripts/application.5e60981f.js"></script>
+      <script src="../assets/javascripts/application.b41f3d20.js"></script>
       
         
         
@@ -760,7 +900,8 @@
     
     
       
-        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-43176477-6","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+        <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-43176477-6","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
   </body>
